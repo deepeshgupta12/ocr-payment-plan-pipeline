@@ -1,0 +1,213 @@
+{
+  "record_type": "payment_plan_extraction",
+  "record_version": "1.0",
+  "project_id": "sikka-kaamya-greens",
+  "created_at_utc": "2026-07-10T10:36:47.293619+00:00",
+  "source": {
+    "file_name": "972-sikka-kaamya-greens-cost-sheet-7086.pdf",
+    "file_path": "/Users/deepeshgupta/payment_plan_pipeline/input_data/972-sikka-kaamya-greens-cost-sheet-7086.pdf"
+  },
+  "extraction": {
+    "document": {
+      "document_type": "price_sheet_with_payment_schedule",
+      "title_as_printed": "SIKKA KAAMYA GREENS (PRICE LIST)",
+      "project_name": "Sikka Kaamya Greens",
+      "extraction_confidence": "high",
+      "confidence_reason": null
+    },
+    "pricing": {
+      "pricing_basis": "per_unit_type",
+      "rate_psf": null,
+      "rate_psf_applies_to": null,
+      "unit_types": [
+        {
+          "unit_label": "Diamond & Emerald",
+          "rate_psf": 11900,
+          "sba_sqft": null,
+          "sba_unit": null,
+          "carpet_sqft": null,
+          "carpet_unit": null,
+          "balcony_sqft": null,
+          "balcony_unit": null,
+          "components": [],
+          "agreement_value": null,
+          "gst_rate_percent": null,
+          "gst_amount": null,
+          "grand_total": null,
+          "grand_total_label_as_printed": null
+        },
+        {
+          "unit_label": "Pearl, Sapphire, Amber, Ruby, Opal, Jade",
+          "rate_psf": 10600,
+          "sba_sqft": null,
+          "sba_unit": null,
+          "carpet_sqft": null,
+          "carpet_unit": null,
+          "balcony_sqft": null,
+          "balcony_unit": null,
+          "components": [],
+          "agreement_value": null,
+          "gst_rate_percent": null,
+          "gst_amount": null,
+          "grand_total": null,
+          "grand_total_label_as_printed": null
+        }
+      ],
+      "inclusions": [],
+      "additional_charges": [
+        {
+          "label": "Covered Parking Charges (One)",
+          "charge_type": "flat",
+          "amount": 400000,
+          "amount_text": null,
+          "applies_to": null,
+          "when_due": "one_time",
+          "covers": []
+        },
+        {
+          "label": "Club Membership Charge",
+          "charge_type": "flat",
+          "amount": 300000,
+          "amount_text": null,
+          "applies_to": null,
+          "when_due": "one_time",
+          "covers": []
+        },
+        {
+          "label": "Power Back-up Charge",
+          "charge_type": "per_kva",
+          "amount": 35000,
+          "amount_text": null,
+          "applies_to": null,
+          "when_due": "one_time",
+          "covers": []
+        },
+        {
+          "label": "Electricity Charges/Dual Meter/ Registry Charges/ GST & Other Govt. Duties/ Legal /Maintainance Security/Levied/levieable",
+          "charge_type": "conditional",
+          "amount": null,
+          "amount_text": "As applicable will be payble extra.",
+          "applies_to": null,
+          "when_due": "unspecified",
+          "covers": []
+        }
+      ],
+      "location_charges": [],
+      "floor_pricing": [],
+      "unit_inventory": [],
+      "price_ranges": [],
+      "conditions": [
+        "Prices shown are indicative only and can be revised at any time on the sole discretion of the company.",
+        "Area of all categories of apartment may vary upto +/-10%.",
+        "Booking is subjected to detailed terms and conditions as mentioned in the company Tentative Application Form & Allotment Letter.",
+        "Cheque/Draft to be issued in favor of \"M/S, ECO GREEN BUILDTECH PVT LTD MASTER COLLECTION ESCROW A/C SIKKA KAAMYA GREEN (100PCT)\"",
+        "Electricity Charges/Dual Meter/ Registry Charges/ GST & Other Govt. Duties/ Legal /Maintainance Security/Levied/levieable. As applicable will be payble extra."
+      ]
+    },
+    "payment_plans": [
+      {
+        "plan_name_as_printed": "Diamond & Emerald",
+        "plan_type_proposed": "other_unclassified",
+        "milestones": [
+          {
+            "sr_no": null,
+            "label": "Booking",
+            "value": 50,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": null,
+            "label": "At the time of Possession",
+            "value": 50,
+            "value_type": "percentage",
+            "value_text": null
+          }
+        ],
+        "milestones_total_printed": null,
+        "conditions": [],
+        "applies_to": null,
+        "notes": null,
+        "plan_type_validated": "possession_linked"
+      },
+      {
+        "plan_name_as_printed": "Pearl, Sapphire, Amber, Ruby, Opal, Jade",
+        "plan_type_proposed": "other_unclassified",
+        "milestones": [
+          {
+            "sr_no": null,
+            "label": "Booking",
+            "value": 50,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": null,
+            "label": "At the time of Possession",
+            "value": 50,
+            "value_type": "percentage",
+            "value_text": null
+          }
+        ],
+        "milestones_total_printed": null,
+        "conditions": [],
+        "applies_to": null,
+        "notes": null,
+        "plan_type_validated": "possession_linked"
+      }
+    ],
+    "terms_and_conditions": [
+      "Prices shown are indicative only and can be revised at any time on the sole discretion of the company.",
+      "Area of all categories of apartment may vary upto +/-10%.",
+      "Booking is subjected to detailed terms and conditions as mentioned in the company Tentative Application Form & Allotment Letter.",
+      "Cheque/Draft to be issued in favor of \"M/S, ECO GREEN BUILDTECH PVT LTD MASTER COLLECTION ESCROW A/C SIKKA KAAMYA GREEN (100PCT)\"",
+      "Electricity Charges/Dual Meter/ Registry Charges/ GST & Other Govt. Duties/ Legal /Maintainance Security/Levied/levieable. As applicable will be payble extra."
+    ]
+  },
+  "validation": {
+    "status": "review_required",
+    "review_required": true,
+    "review_reasons": [
+      "Diamond & Emerald: plan type mismatch (model: other_unclassified, structural: possession_linked).",
+      "Pearl, Sapphire, Amber, Ruby, Opal, Jade: plan type mismatch (model: other_unclassified, structural: possession_linked)."
+    ],
+    "checks": [
+      {
+        "check": "Diamond & Emerald: percentage_sum",
+        "result": "pass",
+        "expected": 100.0,
+        "computed": 100
+      },
+      {
+        "check": "Diamond & Emerald: plan_type_confirmation",
+        "result": "warn",
+        "detail": "Model proposed 'other_unclassified' but structure indicates 'possession_linked'."
+      },
+      {
+        "check": "Pearl, Sapphire, Amber, Ruby, Opal, Jade: percentage_sum",
+        "result": "pass",
+        "expected": 100.0,
+        "computed": 100
+      },
+      {
+        "check": "Pearl, Sapphire, Amber, Ruby, Opal, Jade: plan_type_confirmation",
+        "result": "warn",
+        "detail": "Model proposed 'other_unclassified' but structure indicates 'possession_linked'."
+      },
+      {
+        "check": "Diamond & Emerald-None: agreement_value_reconciliation",
+        "result": "skip",
+        "detail": "Missing rate/SBA/component amounts; cannot reconcile."
+      },
+      {
+        "check": "Pearl, Sapphire, Amber, Ruby, Opal, Jade-None: agreement_value_reconciliation",
+        "result": "skip",
+        "detail": "Missing rate/SBA/component amounts; cannot reconcile."
+      }
+    ],
+    "derived_signals": {
+      "construction_status_inferred": "under_construction",
+      "status_inference_basis": "GST line/condition present"
+    }
+  }
+}

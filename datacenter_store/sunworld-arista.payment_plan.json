@@ -1,0 +1,230 @@
+{
+  "record_type": "payment_plan_extraction",
+  "record_version": "1.0",
+  "project_id": "sunworld-arista",
+  "created_at_utc": "2026-07-10T10:34:10.211229+00:00",
+  "source": {
+    "file_name": "683-683-sunworld-arista-4bhk--pricelist-arista-8041.pdf",
+    "file_path": "/Users/deepeshgupta/payment_plan_pipeline/input_data/683-683-sunworld-arista-4bhk--pricelist-arista-8041.pdf"
+  },
+  "extraction": {
+    "document": {
+      "document_type": "price_sheet_with_payment_schedule",
+      "title_as_printed": "PRICE LIST",
+      "project_name": "THE ARISTA LUXE",
+      "extraction_confidence": "high",
+      "confidence_reason": null
+    },
+    "pricing": {
+      "pricing_basis": "per_unit_type",
+      "rate_psf": null,
+      "rate_psf_applies_to": null,
+      "unit_types": [
+        {
+          "unit_label": "4 BHK + SERVANT TYPE 1",
+          "rate_psf": null,
+          "sba_sqft": 3098,
+          "sba_unit": "Sq.ft",
+          "carpet_sqft": 158.34,
+          "carpet_unit": "Sq.mt",
+          "balcony_sqft": null,
+          "balcony_unit": null,
+          "components": [],
+          "agreement_value": 58862000,
+          "gst_rate_percent": null,
+          "gst_amount": null,
+          "grand_total": null,
+          "grand_total_label_as_printed": null
+        },
+        {
+          "unit_label": "4 BHK + SERVANT TYPE 2",
+          "rate_psf": null,
+          "sba_sqft": 4025,
+          "sba_unit": "Sq.ft",
+          "carpet_sqft": 205.7,
+          "carpet_unit": "Sq.mt",
+          "balcony_sqft": null,
+          "balcony_unit": null,
+          "components": [],
+          "agreement_value": 76475000,
+          "gst_rate_percent": null,
+          "gst_amount": null,
+          "grand_total": null,
+          "grand_total_label_as_printed": null
+        }
+      ],
+      "inclusions": [
+        "VRV system – hot & cold in the apartment",
+        "Modular kitchen with hob & chimney",
+        "Appliances in the kitchen",
+        "Wardrobes in all bedrooms",
+        "Imported marble flooring in living & dining",
+        "Imported marble flooring in master bedroom",
+        "Home automation",
+        "Two covered car parking",
+        "Fire fighting charges",
+        "EEC",
+        "4 KVA power back up"
+      ],
+      "additional_charges": [
+        {
+          "label": "Lease Rent",
+          "charge_type": "per_sqft",
+          "amount": 200,
+          "amount_text": null,
+          "applies_to": "Per Sq.Ft",
+          "when_due": "unspecified",
+          "covers": []
+        },
+        {
+          "label": "Club Membership",
+          "charge_type": "flat",
+          "amount": 500000,
+          "amount_text": null,
+          "applies_to": null,
+          "when_due": "unspecified",
+          "covers": []
+        },
+        {
+          "label": "Additional Car Parking",
+          "charge_type": "flat",
+          "amount": 700000,
+          "amount_text": null,
+          "applies_to": null,
+          "when_due": "unspecified",
+          "covers": []
+        }
+      ],
+      "location_charges": [
+        {
+          "label_as_printed": "PRIME LOCATION CHARGES",
+          "basis": "Rs./Sq.ft",
+          "entries": [
+            {
+              "condition_label": "GF to 5th Floor",
+              "rate": null,
+              "value_text": "NIL"
+            },
+            {
+              "condition_label": "6th to 10th Floor",
+              "rate": 500,
+              "value_text": null
+            },
+            {
+              "condition_label": "11th & Above",
+              "rate": 1000,
+              "value_text": null
+            },
+            {
+              "condition_label": "Road Facing / Yamuna",
+              "rate": 500,
+              "value_text": null
+            },
+            {
+              "condition_label": "Park Facing",
+              "rate": 1000,
+              "value_text": null
+            }
+          ]
+        }
+      ],
+      "floor_pricing": [],
+      "unit_inventory": [],
+      "price_ranges": [],
+      "conditions": [
+        "Registration, GST & Govt charges will be as applicable",
+        "Possession charges will be as applicable"
+      ]
+    },
+    "payment_plans": [
+      {
+        "plan_name_as_printed": "FLEXI PAYMENT PLAN 25:25:25:25",
+        "plan_type_proposed": "flexi",
+        "milestones": [
+          {
+            "sr_no": null,
+            "label": "On expression of interest",
+            "value": null,
+            "value_type": "text",
+            "value_text": "Rs. 15 lacs (3bhk) / Rs. 25 lacs (4bhk)"
+          },
+          {
+            "sr_no": null,
+            "label": "Within 30 days of booking",
+            "value": 10,
+            "value_type": "percentage",
+            "value_text": "10% of BSP (minus the EOI amount paid)"
+          },
+          {
+            "sr_no": null,
+            "label": "Within 90 days of booking",
+            "value": 15,
+            "value_type": "percentage",
+            "value_text": "15% of BSP"
+          },
+          {
+            "sr_no": null,
+            "label": "On 15th floor slab",
+            "value": 25,
+            "value_type": "percentage",
+            "value_text": "25% of BSP"
+          },
+          {
+            "sr_no": null,
+            "label": "On completion of super structure",
+            "value": 25,
+            "value_type": "percentage",
+            "value_text": "25% of BSP"
+          },
+          {
+            "sr_no": null,
+            "label": "On offer of possession",
+            "value": null,
+            "value_type": "percentage_plus_amount",
+            "value_text": "25% of BSP + 100% of additional charges"
+          }
+        ],
+        "milestones_total_printed": null,
+        "conditions": [],
+        "applies_to": null,
+        "notes": null,
+        "plan_type_validated": "other_unclassified"
+      }
+    ],
+    "terms_and_conditions": []
+  },
+  "validation": {
+    "status": "review_required",
+    "review_required": true,
+    "review_reasons": [
+      "FLEXI PAYMENT PLAN 25:25:25:25: contains text/compound milestones — human review before publish.",
+      "FLEXI PAYMENT PLAN 25:25:25:25: plan type could not be confirmed deterministically."
+    ],
+    "checks": [
+      {
+        "check": "FLEXI PAYMENT PLAN 25:25:25:25: percentage_sum",
+        "result": "skip",
+        "detail": "Plan contains non-percentage milestones (['percentage', 'percentage_plus_amount', 'text']); sum-to-100 not applicable."
+      },
+      {
+        "check": "FLEXI PAYMENT PLAN 25:25:25:25: plan_type_confirmation",
+        "result": "warn",
+        "detail": "Structure inconclusive; model proposed 'flexi'."
+      },
+      {
+        "check": "4 BHK + SERVANT TYPE 1-3098: agreement_value_reconciliation",
+        "result": "skip",
+        "detail": "Missing rate/SBA/component amounts; cannot reconcile."
+      },
+      {
+        "check": "4 BHK + SERVANT TYPE 2-4025: agreement_value_reconciliation",
+        "result": "skip",
+        "detail": "Missing rate/SBA/component amounts; cannot reconcile."
+      }
+    ],
+    "derived_signals": {
+      "construction_status_inferred": "under_construction",
+      "status_inference_basis": "GST line/condition present"
+    }
+  }
+}

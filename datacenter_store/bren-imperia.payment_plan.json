@@ -1,0 +1,446 @@
+{
+  "record_type": "payment_plan_extraction",
+  "record_version": "1.0",
+  "project_id": "bren-imperia",
+  "created_at_utc": "2026-07-10T10:39:01.400316+00:00",
+  "source": {
+    "file_name": "8420-8420-bren-imperia-cost-sheet-3683.pdf",
+    "file_path": "/Users/deepeshgupta/payment_plan_pipeline/input_data/8420-8420-bren-imperia-cost-sheet-3683.pdf"
+  },
+  "extraction": {
+    "document": {
+      "document_type": "price_sheet_with_payment_schedule",
+      "title_as_printed": "BREN IMPERIA GRANDE - GENERIC COST SHEET & PAYMENT SCHEDULE",
+      "project_name": null,
+      "extraction_confidence": "high",
+      "confidence_reason": null
+    },
+    "pricing": {
+      "pricing_basis": "per_unit_type",
+      "rate_psf": null,
+      "rate_psf_applies_to": null,
+      "unit_types": [
+        {
+          "unit_label": "4BHK Type 1",
+          "rate_psf": 14170,
+          "sba_sqft": 2316,
+          "sba_unit": "Sq.ft",
+          "carpet_sqft": 1624,
+          "carpet_unit": "Sq.ft",
+          "balcony_sqft": null,
+          "balcony_unit": null,
+          "components": [
+            {
+              "label": "Covered Car Parking",
+              "amount": 600000,
+              "amount_text": null
+            },
+            {
+              "label": "Club House",
+              "amount": 200000,
+              "amount_text": null
+            },
+            {
+              "label": "Additional Expenses (Infra Charges)",
+              "amount": 868500,
+              "amount_text": null
+            }
+          ],
+          "agreement_value": 34486220,
+          "gst_rate_percent": 5,
+          "gst_amount": 1724311,
+          "grand_total": 36210531,
+          "grand_total_label_as_printed": "AMOUNT INCLUDING GST"
+        },
+        {
+          "unit_label": "4BHK Type 2",
+          "rate_psf": 13570,
+          "sba_sqft": 2273,
+          "sba_unit": "Sq.ft",
+          "carpet_sqft": 1590,
+          "carpet_unit": "Sq.ft",
+          "balcony_sqft": null,
+          "balcony_unit": null,
+          "components": [
+            {
+              "label": "Covered Car Parking",
+              "amount": 600000,
+              "amount_text": null
+            },
+            {
+              "label": "Club House",
+              "amount": 200000,
+              "amount_text": null
+            },
+            {
+              "label": "Additional Expenses (Infra Charges)",
+              "amount": 852375,
+              "amount_text": null
+            }
+          ],
+          "agreement_value": 32496985,
+          "gst_rate_percent": 5,
+          "gst_amount": 1624849,
+          "grand_total": 34121834,
+          "grand_total_label_as_printed": "AMOUNT INCLUDING GST"
+        },
+        {
+          "unit_label": "5BHK Type 1",
+          "rate_psf": 14170,
+          "sba_sqft": 2771,
+          "sba_unit": "Sq.ft",
+          "carpet_sqft": 1938,
+          "carpet_unit": "Sq.ft",
+          "balcony_sqft": null,
+          "balcony_unit": null,
+          "components": [
+            {
+              "label": "Covered Car Parking",
+              "amount": 1000000,
+              "amount_text": null
+            },
+            {
+              "label": "Club House",
+              "amount": 200000,
+              "amount_text": null
+            },
+            {
+              "label": "Additional Expenses (Infra Charges)",
+              "amount": 1039125,
+              "amount_text": null
+            }
+          ],
+          "agreement_value": 41504195,
+          "gst_rate_percent": 5,
+          "gst_amount": 2075210,
+          "grand_total": 43579405,
+          "grand_total_label_as_printed": "AMOUNT INCLUDING GST"
+        },
+        {
+          "unit_label": "5BHK Type 2",
+          "rate_psf": 14170,
+          "sba_sqft": 2719,
+          "sba_unit": "Sq.ft",
+          "carpet_sqft": 1900,
+          "carpet_unit": "Sq.ft",
+          "balcony_sqft": null,
+          "balcony_unit": null,
+          "components": [
+            {
+              "label": "Covered Car Parking",
+              "amount": 1000000,
+              "amount_text": null
+            },
+            {
+              "label": "Club House",
+              "amount": 200000,
+              "amount_text": null
+            },
+            {
+              "label": "Additional Expenses (Infra Charges)",
+              "amount": 1019625,
+              "amount_text": null
+            }
+          ],
+          "agreement_value": 40747855,
+          "gst_rate_percent": 5,
+          "gst_amount": 2037393,
+          "grand_total": 42785248,
+          "grand_total_label_as_printed": "AMOUNT INCLUDING GST"
+        }
+      ],
+      "inclusions": [],
+      "additional_charges": [
+        {
+          "label": "Legal & Documentation Charges",
+          "charge_type": "flat",
+          "amount": 50000,
+          "amount_text": null,
+          "applies_to": null,
+          "when_due": "unspecified",
+          "covers": []
+        },
+        {
+          "label": "1 Year Maintenance Expenses (Incl GST)",
+          "charge_type": "flat",
+          "amount": null,
+          "amount_text": "229,562",
+          "applies_to": "4BHK Type 1",
+          "when_due": "unspecified",
+          "covers": []
+        },
+        {
+          "label": "1 Year Maintenance Expenses (Incl GST)",
+          "charge_type": "flat",
+          "amount": null,
+          "amount_text": "225,300",
+          "applies_to": "4BHK Type 2",
+          "when_due": "unspecified",
+          "covers": []
+        },
+        {
+          "label": "1 Year Maintenance Expenses (Incl GST)",
+          "charge_type": "flat",
+          "amount": null,
+          "amount_text": "274,662",
+          "applies_to": "5BHK Type 1",
+          "when_due": "unspecified",
+          "covers": []
+        },
+        {
+          "label": "1 Year Maintenance Expenses (Incl GST)",
+          "charge_type": "flat",
+          "amount": null,
+          "amount_text": "269,507",
+          "applies_to": "5BHK Type 2",
+          "when_due": "unspecified",
+          "covers": []
+        },
+        {
+          "label": "Floor Rise Charges",
+          "charge_type": "per_sqft",
+          "amount": 20,
+          "amount_text": null,
+          "applies_to": "Per Square Feet",
+          "when_due": "unspecified",
+          "covers": []
+        }
+      ],
+      "location_charges": [],
+      "floor_pricing": [],
+      "unit_inventory": [],
+      "price_ranges": [],
+      "conditions": [
+        "Maintenance estimated @ Rs 7 per Square Feet of Super built-up Area per month, will be payable for a year in advance before registration and handing over Possession by way of Cheque / DD favouring BREN CORPORATION. GST will be applicable as per Govt regulations",
+        "Customers are liable to pay the Legal and Documentation Charges of Rs.50,000/- plus applicable taxes if any Per Apartment",
+        "As per the prevailing GST rules, GST is calculated at 5% of apartment cost. GST rate is subject to change as per Govt regulations",
+        "1% TDS under Section194-IA to be deducted and paid to the concerned authorities with each installment if the agreement value is Rs.50 Lakhs and above and the Allotee is responsible for any penalty levied by the authorities in case of any delay in the payment of the same",
+        "E-Stamp on agreement is 0.5% of the Sale agreement which is payable on demand at the time of Agreement",
+        "Above cost does not includes BWSSB Deposits /Charges should be borne by the customer as and when applicable",
+        "Customer shall bear the other applicable taxes as and when imposed by the Government",
+        "Payment to be made by way of DD/Local Cheques in favour of: BREN CORPORATION",
+        "Prices may change any time without prior notice"
+      ]
+    },
+    "payment_plans": [
+      {
+        "plan_name_as_printed": "PAYMENT SCHEDULE",
+        "plan_type_proposed": "construction_linked",
+        "milestones": [
+          {
+            "sr_no": null,
+            "label": "Booking Amount (Earnest Deposit - 10 L for 4 BHK, 15 L for 5BHK)",
+            "value": null,
+            "value_type": "text",
+            "value_text": "10%"
+          },
+          {
+            "sr_no": null,
+            "label": "Balance Booking Amount (to be paid in PDC of 15 Days from the days of booking)",
+            "value": 10,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": null,
+            "label": "On Completion of Agreement (to be paid within 30 days of Agreement)",
+            "value": 10,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": null,
+            "label": "On Completion of Foundation/footing",
+            "value": 5,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": null,
+            "label": "On Completion of Upper Basement",
+            "value": 5,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": null,
+            "label": "On Completion of Ground Floor roof Slab",
+            "value": 5,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": null,
+            "label": "On Completion of Fourth Floor roof Slab",
+            "value": 8,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": null,
+            "label": "On Completion of Eighth Floor roof Slab",
+            "value": 8,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": null,
+            "label": "On Completion of Twelfth Floor roof Slab",
+            "value": 8,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": null,
+            "label": "On Completion of Sixteenth Floor roof Slab",
+            "value": 8,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": null,
+            "label": "On Completion of Twentieth Floor roof Slab",
+            "value": 8,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": null,
+            "label": "On Completion of Flooring",
+            "value": 7,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": null,
+            "label": "On Installation of Windows & Doors",
+            "value": 8,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": null,
+            "label": "On Registration / Possession ( Whichever is earlier)",
+            "value": 10,
+            "value_type": "percentage",
+            "value_text": null
+          }
+        ],
+        "milestones_total_printed": 100,
+        "conditions": [],
+        "applies_to": null,
+        "notes": null,
+        "plan_type_validated": "other_unclassified"
+      }
+    ],
+    "terms_and_conditions": [
+      "Maintenance estimated @ Rs 7 per Square Feet of Super built-up Area per month, will be payable for a year in advance before registration and handing over Possession by way of Cheque / DD favouring BREN CORPORATION. GST will be applicable as per Govt regulations",
+      "Customers are liable to pay the Legal and Documentation Charges of Rs.50,000/- plus applicable taxes if any Per Apartment",
+      "As per the prevailing GST rules, GST is calculated at 5% of apartment cost. GST rate is subject to change as per Govt regulations",
+      "1% TDS under Section194-IA to be deducted and paid to the concerned authorities with each installment if the agreement value is Rs.50 Lakhs and above and the Allotee is responsible for any penalty levied by the authorities in case of any delay in the payment of the same",
+      "E-Stamp on agreement is 0.5% of the Sale agreement which is payable on demand at the time of Agreement",
+      "Above cost does not includes BWSSB Deposits /Charges should be borne by the customer as and when applicable",
+      "Customer shall bear the other applicable taxes as and when imposed by the Government",
+      "Payment to be made by way of DD/Local Cheques in favour of: BREN CORPORATION",
+      "Prices may change any time without prior notice"
+    ]
+  },
+  "validation": {
+    "status": "review_required",
+    "review_required": true,
+    "review_reasons": [
+      "PAYMENT SCHEDULE: contains text/compound milestones — human review before publish.",
+      "PAYMENT SCHEDULE: plan type could not be confirmed deterministically."
+    ],
+    "checks": [
+      {
+        "check": "PAYMENT SCHEDULE: percentage_sum",
+        "result": "skip",
+        "detail": "Plan contains non-percentage milestones (['percentage', 'text']); sum-to-100 not applicable."
+      },
+      {
+        "check": "PAYMENT SCHEDULE: plan_type_confirmation",
+        "result": "warn",
+        "detail": "Structure inconclusive; model proposed 'construction_linked'."
+      },
+      {
+        "check": "4BHK Type 1-2316: agreement_value_reconciliation",
+        "result": "pass",
+        "expected": 34486220,
+        "computed": 34486220
+      },
+      {
+        "check": "4BHK Type 1-2316: gst_reconciliation",
+        "result": "pass",
+        "expected": 1724311,
+        "computed": 1724311.0
+      },
+      {
+        "check": "4BHK Type 1-2316: grand_total_reconciliation",
+        "result": "pass",
+        "expected": 36210531,
+        "computed": 36210531
+      },
+      {
+        "check": "4BHK Type 2-2273: agreement_value_reconciliation",
+        "result": "pass",
+        "expected": 32496985,
+        "computed": 32496985
+      },
+      {
+        "check": "4BHK Type 2-2273: gst_reconciliation",
+        "result": "pass",
+        "expected": 1624849,
+        "computed": 1624849.25
+      },
+      {
+        "check": "4BHK Type 2-2273: grand_total_reconciliation",
+        "result": "pass",
+        "expected": 34121834,
+        "computed": 34121834
+      },
+      {
+        "check": "5BHK Type 1-2771: agreement_value_reconciliation",
+        "result": "pass",
+        "expected": 41504195,
+        "computed": 41504195
+      },
+      {
+        "check": "5BHK Type 1-2771: gst_reconciliation",
+        "result": "pass",
+        "expected": 2075210,
+        "computed": 2075209.75
+      },
+      {
+        "check": "5BHK Type 1-2771: grand_total_reconciliation",
+        "result": "pass",
+        "expected": 43579405,
+        "computed": 43579405
+      },
+      {
+        "check": "5BHK Type 2-2719: agreement_value_reconciliation",
+        "result": "pass",
+        "expected": 40747855,
+        "computed": 40747855
+      },
+      {
+        "check": "5BHK Type 2-2719: gst_reconciliation",
+        "result": "pass",
+        "expected": 2037393,
+        "computed": 2037392.75
+      },
+      {
+        "check": "5BHK Type 2-2719: grand_total_reconciliation",
+        "result": "pass",
+        "expected": 42785248,
+        "computed": 42785248
+      }
+    ],
+    "derived_signals": {
+      "city_inferred": "Bengaluru",
+      "city_inference_basis": "Utility reference 'BWSSB' in document.",
+      "construction_status_inferred": "under_construction",
+      "status_inference_basis": "GST line/condition present"
+    }
+  }
+}

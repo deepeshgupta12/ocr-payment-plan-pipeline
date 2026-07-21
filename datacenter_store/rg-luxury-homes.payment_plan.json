@@ -1,0 +1,429 @@
+{
+  "record_type": "payment_plan_extraction",
+  "record_version": "1.0",
+  "project_id": "rg-luxury-homes",
+  "created_at_utc": "2026-07-10T10:35:40.834466+00:00",
+  "source": {
+    "file_name": "902-902-rg-luxury-homes-cost-sheet-2381.pdf",
+    "file_path": "/Users/deepeshgupta/payment_plan_pipeline/input_data/902-902-rg-luxury-homes-cost-sheet-2381.pdf"
+  },
+  "extraction": {
+    "document": {
+      "document_type": "price_sheet_with_payment_schedule",
+      "title_as_printed": "PRICE LIST FOR RG LUXURY HOMES",
+      "project_name": "RG Luxury Homes",
+      "extraction_confidence": "high",
+      "confidence_reason": null
+    },
+    "pricing": {
+      "pricing_basis": "per_floor",
+      "rate_psf": null,
+      "rate_psf_applies_to": null,
+      "unit_types": [
+        {
+          "unit_label": "3 BHK+2T",
+          "rate_psf": null,
+          "sba_sqft": 1175,
+          "sba_unit": "Sq.ft",
+          "carpet_sqft": 645,
+          "carpet_unit": "Sq.ft",
+          "balcony_sqft": null,
+          "balcony_unit": null,
+          "components": [],
+          "agreement_value": null,
+          "gst_rate_percent": null,
+          "gst_amount": null,
+          "grand_total": null,
+          "grand_total_label_as_printed": null
+        }
+      ],
+      "inclusions": [],
+      "additional_charges": [
+        {
+          "label": "GST",
+          "charge_type": "text",
+          "amount": null,
+          "amount_text": "AS PER APPLICABLE",
+          "applies_to": null,
+          "when_due": "unspecified",
+          "covers": []
+        },
+        {
+          "label": "EEC & FFC @ RS 35/- PER SQUARE FEET",
+          "charge_type": "flat",
+          "amount": 41125,
+          "amount_text": null,
+          "applies_to": null,
+          "when_due": "unspecified",
+          "covers": []
+        },
+        {
+          "label": "COVERED CAR PARKING",
+          "charge_type": "flat",
+          "amount": 300000,
+          "amount_text": null,
+          "applies_to": null,
+          "when_due": "unspecified",
+          "covers": []
+        },
+        {
+          "label": "CLUB MEMBERSHIP",
+          "charge_type": "flat",
+          "amount": 100000,
+          "amount_text": null,
+          "applies_to": null,
+          "when_due": "unspecified",
+          "covers": []
+        }
+      ],
+      "location_charges": [
+        {
+          "label_as_printed": "PLC (PREFERRED LOCATION CHARGES)",
+          "basis": "PER SQUARE FEET",
+          "entries": [
+            {
+              "condition_label": "PLC ( PARK FACING)",
+              "rate": 400,
+              "value_text": null
+            },
+            {
+              "condition_label": "PLC ( ROAD FACING)",
+              "rate": 250,
+              "value_text": null
+            }
+          ]
+        }
+      ],
+      "floor_pricing": [
+        {
+          "applies_to": null,
+          "basis": null,
+          "column_headers": [
+            "RATE",
+            "INR RS."
+          ],
+          "rows": [
+            {
+              "floor_label": "1ST TO 5TH",
+              "cells": [
+                {
+                  "column_label": "RATE",
+                  "value": 9400,
+                  "value_text": null,
+                  "breakdown": []
+                },
+                {
+                  "column_label": "INR RS.",
+                  "value": 11045000,
+                  "value_text": null,
+                  "breakdown": []
+                }
+              ]
+            },
+            {
+              "floor_label": "6TH TO 10TH",
+              "cells": [
+                {
+                  "column_label": "RATE",
+                  "value": 9350,
+                  "value_text": null,
+                  "breakdown": []
+                },
+                {
+                  "column_label": "INR RS.",
+                  "value": 10986250,
+                  "value_text": null,
+                  "breakdown": []
+                }
+              ]
+            },
+            {
+              "floor_label": "11TH TO 15TH",
+              "cells": [
+                {
+                  "column_label": "RATE",
+                  "value": 9300,
+                  "value_text": null,
+                  "breakdown": []
+                },
+                {
+                  "column_label": "INR RS.",
+                  "value": 10927500,
+                  "value_text": null,
+                  "breakdown": []
+                }
+              ]
+            },
+            {
+              "floor_label": "16TH TO 20TH",
+              "cells": [
+                {
+                  "column_label": "RATE",
+                  "value": 9250,
+                  "value_text": null,
+                  "breakdown": []
+                },
+                {
+                  "column_label": "INR RS.",
+                  "value": 10868750,
+                  "value_text": null,
+                  "breakdown": []
+                }
+              ]
+            },
+            {
+              "floor_label": "21ST TO 24TH",
+              "cells": [
+                {
+                  "column_label": "RATE",
+                  "value": 9150,
+                  "value_text": null,
+                  "breakdown": []
+                },
+                {
+                  "column_label": "INR RS.",
+                  "value": 10751250,
+                  "value_text": null,
+                  "breakdown": []
+                }
+              ]
+            },
+            {
+              "floor_label": "25TH TO 27TH",
+              "cells": [
+                {
+                  "column_label": "RATE",
+                  "value": 9050,
+                  "value_text": null,
+                  "breakdown": []
+                },
+                {
+                  "column_label": "INR RS.",
+                  "value": 10633750,
+                  "value_text": null,
+                  "breakdown": []
+                }
+              ]
+            },
+            {
+              "floor_label": "TOP FLOOR",
+              "cells": [
+                {
+                  "column_label": "RATE",
+                  "value": 8900,
+                  "value_text": null,
+                  "breakdown": []
+                },
+                {
+                  "column_label": "INR RS.",
+                  "value": 10457500,
+                  "value_text": null,
+                  "breakdown": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "unit_inventory": [],
+      "price_ranges": [],
+      "conditions": [
+        "IFMS Rs. 60 psf on carpet area (one time) & Possession charges will be payable on offer of possession.",
+        "Rs. 25000/- per KVA for additional Power backup, Subject to approval of Management.",
+        "Possession charges, Govt. Charges like Stamp Duty, GST on other charges to be payable extra.",
+        "Prices are subject to change without any prior notice, at the sole discretion of the company.",
+        "Cancellations, interest, and refunds as per terms and conditions set out in the application form and builder buyer agreement.",
+        "No escalation shall be charged for apartments sold.",
+        "The building plans and unit size are tentative and the builder may make such changes, modification, alteration and additions therein as may be deemed necessary or may be required to be done by the builder, the Government authority, any other local authority or body having jurisdiction.",
+        "Registration, stamp duty charges, service tax, GST and any other taxes are extra as per Government norms.",
+        "The company and its agents do not endorse any kind of credit note.",
+        "The price list is for comparative purpose only. The flat shall be sold at a lump sum price. This break-up is only for calculation and comparative purpose.",
+        "No request for a plan change will be entertained.",
+        "The Company reserves the right to withdraw the payment plan at it's sole discretion without any prior notice.",
+        "All parking will be allotted at the sole discretion of the company/developer.",
+        "Apart from the above-mentioned charges, charges for electricity connection, gas connection, water & sewerage connection, dual meter or any other service will be charged extra at the time of offer of possession.",
+        "The total cost of the unit will be calculated on super area using a bundle pricing method however,if need be, as per RERA guidelines if the calculation has to be done on the carpet area, it can be done by factoring in the total cost as per carpet area.",
+        "IFMS Rs. 60 psf on carpet area (one time)& Possession charges will be payable on offer of possession."
+      ]
+    },
+    "payment_plans": [
+      {
+        "plan_name_as_printed": "CONSTRUCTION LINKED PAYMENT PLAN",
+        "plan_type_proposed": "construction_linked",
+        "milestones": [
+          {
+            "sr_no": null,
+            "label": "AT THE TIME OF BOOKING",
+            "value": 10,
+            "value_type": "percentage",
+            "value_text": "10% OF BSP"
+          },
+          {
+            "sr_no": null,
+            "label": "WITHIN 30 DAYS OF BOOKING",
+            "value": 15,
+            "value_type": "percentage",
+            "value_text": "15% OF BSP"
+          },
+          {
+            "sr_no": null,
+            "label": "ON START OF FOUNDATION WORK",
+            "value": 5,
+            "value_type": "percentage",
+            "value_text": "5% OF BSP"
+          },
+          {
+            "sr_no": null,
+            "label": "ON START OF LOWER BASEMENT ROOF",
+            "value": 5,
+            "value_type": "percentage",
+            "value_text": "5% OF BSP"
+          },
+          {
+            "sr_no": null,
+            "label": "ON START OF UPPER BASEMENT ROOF",
+            "value": 5,
+            "value_type": "percentage",
+            "value_text": "5% OF BSP"
+          },
+          {
+            "sr_no": null,
+            "label": "ON START OF STILT FLOOR ROOF",
+            "value": 5,
+            "value_type": "percentage",
+            "value_text": "5% OF BSP"
+          },
+          {
+            "sr_no": null,
+            "label": "ON START OF 4TH FLOOR ROOF",
+            "value": 5,
+            "value_type": "percentage",
+            "value_text": "5% OF BSP"
+          },
+          {
+            "sr_no": null,
+            "label": "ON START OF 8TH FLOOR ROOF",
+            "value": 5,
+            "value_type": "percentage",
+            "value_text": "5% OF BSP"
+          },
+          {
+            "sr_no": null,
+            "label": "ON START OF 12TH FLOOR ROOF",
+            "value": 5,
+            "value_type": "percentage",
+            "value_text": "5% OF BSP"
+          },
+          {
+            "sr_no": null,
+            "label": "ON START OF 16TH FLOOR ROOF",
+            "value": 5,
+            "value_type": "percentage",
+            "value_text": "5% OF BSP"
+          },
+          {
+            "sr_no": null,
+            "label": "ON START OF 20TH FLOOR ROOF",
+            "value": 5,
+            "value_type": "percentage",
+            "value_text": "5% OF BSP"
+          },
+          {
+            "sr_no": null,
+            "label": "ON START OF 24TH FLOOR ROOF",
+            "value": 5,
+            "value_type": "percentage",
+            "value_text": "5% OF BSP"
+          },
+          {
+            "sr_no": null,
+            "label": "ON START OF 28TH FLOOR ROOF",
+            "value": 5,
+            "value_type": "percentage",
+            "value_text": "5% OF BSP"
+          },
+          {
+            "sr_no": null,
+            "label": "ON START OF EXTERNAL PAINT",
+            "value": 5,
+            "value_type": "percentage",
+            "value_text": "5% OF BSP"
+          },
+          {
+            "sr_no": null,
+            "label": "ON START OF EXTERNAL WINDOWS",
+            "value": 5,
+            "value_type": "percentage",
+            "value_text": "5% OF BSP"
+          },
+          {
+            "sr_no": null,
+            "label": "ON START OF TOWER COMMON AREA TILING",
+            "value": 5,
+            "value_type": "percentage",
+            "value_text": "5% OF BSP"
+          },
+          {
+            "sr_no": null,
+            "label": "ON OFFER OF POSSESSION",
+            "value": null,
+            "value_type": "percentage_plus_amount",
+            "value_text": "5% OF BSP +POSSESSION CHARGES"
+          }
+        ],
+        "milestones_total_printed": null,
+        "conditions": [],
+        "applies_to": null,
+        "notes": null,
+        "plan_type_validated": "other_unclassified"
+      }
+    ],
+    "terms_and_conditions": [
+      "DD/ Cheque should be in favour of ' Rajesh Projects (India) Pvt Ltd'.",
+      "IFMS Rs. 60 psf on carpet area (one time)& Possession charges will be payable on offer of possession.",
+      "Rs. 25000/- per KVA for additional Power backup, Subject to approval of Management.",
+      "Possession charges, Govt. Charges like Stamp Duty, GST on other charges to be payable extra.",
+      "Prices are subject to change without any prior notice, at the sole discretion of the company.",
+      "Cancellations, interest, and refunds as per terms and conditions set out in the application form and builder buyer agreement.",
+      "No escalation shall be charged for apartments sold.",
+      "The building plans and unit size are tentative and the builder may make such changes, modification, alteration and additions therein as may be deemed necessary or may be required to be done by the builder, the Government authority, any other local authority or body having jurisdiction.",
+      "Registration, stamp duty charges, service tax, GST and any other taxes are extra as per Government norms.",
+      "The company and its agents do not endorse any kind of credit note.",
+      "The price list is for comparative purpose only. The flat shall be sold at a lump sum price. This break-up is only for calculation and comparative purpose.",
+      "No request for a plan change will be entertained.",
+      "The Company reserves the right to withdraw the payment plan at it's sole discretion without any prior notice.",
+      "All parking will be allotted at the sole discretion of the company/developer.",
+      "Apart from the above-mentioned charges, charges for electricity connection, gas connection, water & sewerage connection, dual meter or any other service will be charged extra at the time of offer of possession.",
+      "The total cost of the unit will be calculated on super area using a bundle pricing method however,if need be, as per RERA guidelines if the calculation has to be done on the carpet area, it can be done by factoring in the total cost as per carpet area."
+    ]
+  },
+  "validation": {
+    "status": "review_required",
+    "review_required": true,
+    "review_reasons": [
+      "CONSTRUCTION LINKED PAYMENT PLAN: contains text/compound milestones — human review before publish.",
+      "CONSTRUCTION LINKED PAYMENT PLAN: plan type could not be confirmed deterministically."
+    ],
+    "checks": [
+      {
+        "check": "CONSTRUCTION LINKED PAYMENT PLAN: percentage_sum",
+        "result": "skip",
+        "detail": "Plan contains non-percentage milestones (['percentage', 'percentage_plus_amount']); sum-to-100 not applicable."
+      },
+      {
+        "check": "CONSTRUCTION LINKED PAYMENT PLAN: plan_type_confirmation",
+        "result": "warn",
+        "detail": "Structure inconclusive; model proposed 'construction_linked'."
+      },
+      {
+        "check": "3 BHK+2T-1175: agreement_value_reconciliation",
+        "result": "skip",
+        "detail": "Missing rate/SBA/component amounts; cannot reconcile."
+      }
+    ],
+    "derived_signals": {
+      "construction_status_inferred": "under_construction",
+      "status_inference_basis": "GST line/condition present"
+    }
+  }
+}

@@ -1,0 +1,342 @@
+{
+  "record_type": "payment_plan_extraction",
+  "record_version": "1.0",
+  "project_id": "divine-green-leaf",
+  "created_at_utc": "2026-07-10T10:33:28.904228+00:00",
+  "source": {
+    "file_name": "Divine Green Leaf Price Sheet.png",
+    "file_path": "/Users/deepeshgupta/payment_plan_pipeline/input_data/Divine Green Leaf Price Sheet.png"
+  },
+  "extraction": {
+    "document": {
+      "document_type": "price_sheet_with_payment_schedule",
+      "title_as_printed": "Divine Green Leaf Price Sheet",
+      "project_name": null,
+      "extraction_confidence": "high",
+      "confidence_reason": null
+    },
+    "pricing": {
+      "pricing_basis": "per_unit_type",
+      "rate_psf": 6699,
+      "rate_psf_applies_to": "SBA",
+      "unit_types": [
+        {
+          "unit_label": "2BHK",
+          "rate_psf": 6699,
+          "sba_sqft": 1120,
+          "sba_unit": "Sq.ft",
+          "carpet_sqft": 789,
+          "carpet_unit": "Sq.ft",
+          "balcony_sqft": null,
+          "balcony_unit": null,
+          "components": [
+            {
+              "label": "Car Park Reservations",
+              "amount": 150000,
+              "amount_text": null
+            },
+            {
+              "label": "Amenities + Clubhouse",
+              "amount": 150000,
+              "amount_text": null
+            },
+            {
+              "label": "Legal & Facility Fees",
+              "amount": 30000,
+              "amount_text": null
+            },
+            {
+              "label": "First Year Maintenance charges @ 4/- sq.ft",
+              "amount": 53760,
+              "amount_text": null
+            },
+            {
+              "label": "BWSSB & KEB Deposit",
+              "amount": 280000,
+              "amount_text": null
+            }
+          ],
+          "agreement_value": 8166640,
+          "gst_rate_percent": 5,
+          "gst_amount": 408332,
+          "grand_total": 8574972,
+          "grand_total_label_as_printed": "Grand Total ( Excluding the Stamp Duty & Registration )"
+        },
+        {
+          "unit_label": "3BHK",
+          "rate_psf": 6699,
+          "sba_sqft": 1220,
+          "sba_unit": "Sq.ft",
+          "carpet_sqft": 795,
+          "carpet_unit": "Sq.ft",
+          "balcony_sqft": null,
+          "balcony_unit": null,
+          "components": [
+            {
+              "label": "Car Park Reservations",
+              "amount": 150000,
+              "amount_text": null
+            },
+            {
+              "label": "Amenities + Clubhouse",
+              "amount": 150000,
+              "amount_text": null
+            },
+            {
+              "label": "Legal & Facility Fees",
+              "amount": 30000,
+              "amount_text": null
+            },
+            {
+              "label": "First Year Maintenance charges @ 4/- sq.ft",
+              "amount": 58560,
+              "amount_text": null
+            },
+            {
+              "label": "BWSSB & KEB Deposit",
+              "amount": 305000,
+              "amount_text": null
+            }
+          ],
+          "agreement_value": 8866340,
+          "gst_rate_percent": 5,
+          "gst_amount": 443317,
+          "grand_total": 9309657,
+          "grand_total_label_as_printed": "Grand Total ( Excluding the Stamp Duty & Registration )"
+        },
+        {
+          "unit_label": "3BHK",
+          "rate_psf": 6699,
+          "sba_sqft": 1490,
+          "sba_unit": "Sq.ft",
+          "carpet_sqft": 980,
+          "carpet_unit": "Sq.ft",
+          "balcony_sqft": null,
+          "balcony_unit": null,
+          "components": [
+            {
+              "label": "Car Park Reservations",
+              "amount": 150000,
+              "amount_text": null
+            },
+            {
+              "label": "Amenities + Clubhouse",
+              "amount": 150000,
+              "amount_text": null
+            },
+            {
+              "label": "Legal & Facility Fees",
+              "amount": 30000,
+              "amount_text": null
+            },
+            {
+              "label": "First Year Maintenance charges @ 4/- sq.ft",
+              "amount": 71520,
+              "amount_text": null
+            },
+            {
+              "label": "BWSSB & KEB Deposit",
+              "amount": 372500,
+              "amount_text": null
+            }
+          ],
+          "agreement_value": 10755530,
+          "gst_rate_percent": 5,
+          "gst_amount": 537776.5,
+          "grand_total": 11293307,
+          "grand_total_label_as_printed": "Grand Total ( Excluding the Stamp Duty & Registration )"
+        }
+      ],
+      "inclusions": [],
+      "additional_charges": [],
+      "location_charges": [],
+      "floor_pricing": [],
+      "unit_inventory": [],
+      "price_ranges": [],
+      "conditions": []
+    },
+    "payment_plans": [
+      {
+        "plan_name_as_printed": "Payment Schedule",
+        "plan_type_proposed": "construction_linked",
+        "milestones": [
+          {
+            "sr_no": 1,
+            "label": "On Signing AOS",
+            "value": 20,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": 2,
+            "label": "At the time of Foundation",
+            "value": 10,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": 3,
+            "label": "On Casting of Basement Floor Slab",
+            "value": 10,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": 4,
+            "label": "On Casting of Ground Floor Slab",
+            "value": 8,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": 5,
+            "label": "On Casting of 1st Floor Slab",
+            "value": 8,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": 6,
+            "label": "On Casting of 2nd Floor Slab",
+            "value": 8,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": 7,
+            "label": "On Casting of 3rd Floor Slab",
+            "value": 8,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": 8,
+            "label": "On Casting of 4th Floor Slab",
+            "value": 8,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": 9,
+            "label": "Brick Work",
+            "value": 5,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": 10,
+            "label": "Plastering",
+            "value": 5,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": 11,
+            "label": "Tiles Work",
+            "value": 5,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": 12,
+            "label": "At the time of Handover",
+            "value": 5,
+            "value_type": "percentage",
+            "value_text": null
+          }
+        ],
+        "milestones_total_printed": 100,
+        "conditions": [],
+        "applies_to": null,
+        "notes": null,
+        "plan_type_validated": "construction_linked"
+      }
+    ],
+    "terms_and_conditions": []
+  },
+  "validation": {
+    "status": "auto_approved",
+    "review_required": false,
+    "review_reasons": [],
+    "checks": [
+      {
+        "check": "Payment Schedule: percentage_sum",
+        "result": "pass",
+        "expected": 100.0,
+        "computed": 100
+      },
+      {
+        "check": "Payment Schedule: printed_total_matches_computed",
+        "result": "pass",
+        "expected": 100,
+        "computed": 100
+      },
+      {
+        "check": "Payment Schedule: plan_type_confirmation",
+        "result": "pass",
+        "detail": "Model proposal 'construction_linked' confirmed by structure."
+      },
+      {
+        "check": "2BHK-1120: agreement_value_reconciliation",
+        "result": "pass",
+        "expected": 8166640,
+        "computed": 8166640
+      },
+      {
+        "check": "2BHK-1120: gst_reconciliation",
+        "result": "pass",
+        "expected": 408332,
+        "computed": 408332.0
+      },
+      {
+        "check": "2BHK-1120: grand_total_reconciliation",
+        "result": "pass",
+        "expected": 8574972,
+        "computed": 8574972
+      },
+      {
+        "check": "3BHK-1220: agreement_value_reconciliation",
+        "result": "pass",
+        "expected": 8866340,
+        "computed": 8866340
+      },
+      {
+        "check": "3BHK-1220: gst_reconciliation",
+        "result": "pass",
+        "expected": 443317,
+        "computed": 443317.0
+      },
+      {
+        "check": "3BHK-1220: grand_total_reconciliation",
+        "result": "pass",
+        "expected": 9309657,
+        "computed": 9309657
+      },
+      {
+        "check": "3BHK-1490: agreement_value_reconciliation",
+        "result": "pass",
+        "expected": 10755530,
+        "computed": 10755530
+      },
+      {
+        "check": "3BHK-1490: gst_reconciliation",
+        "result": "pass",
+        "expected": 537776.5,
+        "computed": 537776.5
+      },
+      {
+        "check": "3BHK-1490: grand_total_reconciliation",
+        "result": "pass",
+        "detail": "Rounding delta 0.50 INR (within tolerance)",
+        "expected": 11293307,
+        "computed": 11293306.5
+      }
+    ],
+    "derived_signals": {
+      "city_inferred": "Bengaluru",
+      "city_inference_basis": "Utility reference 'BWSSB' in document.",
+      "construction_status_inferred": "under_construction",
+      "status_inference_basis": "GST line/condition present and construction-linked milestones"
+    }
+  }
+}

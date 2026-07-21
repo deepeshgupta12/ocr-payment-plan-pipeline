@@ -1,0 +1,188 @@
+{
+  "record_type": "payment_plan_extraction",
+  "record_version": "1.0",
+  "project_id": "oasis-grandstand",
+  "created_at_utc": "2026-07-10T10:36:15.974227+00:00",
+  "source": {
+    "file_name": "1236-1236-grandstand-9885.jpeg",
+    "file_path": "/Users/deepeshgupta/payment_plan_pipeline/input_data/1236-1236-grandstand-9885.jpeg"
+  },
+  "extraction": {
+    "document": {
+      "document_type": "price_sheet_only",
+      "title_as_printed": "Price List W.E.F 03.12.25",
+      "project_name": "Oasis GrandStand",
+      "extraction_confidence": "high",
+      "confidence_reason": null
+    },
+    "pricing": {
+      "pricing_basis": "single",
+      "rate_psf": 8999,
+      "rate_psf_applies_to": null,
+      "unit_types": [],
+      "inclusions": [],
+      "additional_charges": [
+        {
+          "label": "EEC/FFC",
+          "charge_type": "per_sqft",
+          "amount": 70,
+          "amount_text": null,
+          "applies_to": "Per Sq.Ft",
+          "when_due": "unspecified",
+          "covers": []
+        },
+        {
+          "label": "EDC/IDC",
+          "charge_type": "per_sqft",
+          "amount": 70,
+          "amount_text": null,
+          "applies_to": "Per Sq.Ft",
+          "when_due": "unspecified",
+          "covers": []
+        },
+        {
+          "label": "ONE COVERED CAR PARKING",
+          "charge_type": "flat",
+          "amount": 300000,
+          "amount_text": null,
+          "applies_to": null,
+          "when_due": "unspecified",
+          "covers": []
+        },
+        {
+          "label": "CLUB CHARGES",
+          "charge_type": "flat",
+          "amount": 100000,
+          "amount_text": null,
+          "applies_to": null,
+          "when_due": "unspecified",
+          "covers": []
+        },
+        {
+          "label": "UPPCL",
+          "charge_type": "per_kw",
+          "amount": 10000,
+          "amount_text": "INR 10K PER KW",
+          "applies_to": "Per KW",
+          "when_due": "at_possession",
+          "covers": []
+        },
+        {
+          "label": "POWER BACKUP CHARGES",
+          "charge_type": "per_kva",
+          "amount": 20000,
+          "amount_text": "INR 20K PER KW",
+          "applies_to": "Per KW",
+          "when_due": "at_possession",
+          "covers": []
+        },
+        {
+          "label": "IFMS",
+          "charge_type": "flat",
+          "amount": 25,
+          "amount_text": null,
+          "applies_to": null,
+          "when_due": "at_possession",
+          "covers": []
+        },
+        {
+          "label": "LEASE RENT",
+          "charge_type": "flat",
+          "amount": 50,
+          "amount_text": null,
+          "applies_to": null,
+          "when_due": "at_possession",
+          "covers": []
+        },
+        {
+          "label": "FARMER COMPENSATION",
+          "charge_type": "flat",
+          "amount": 100,
+          "amount_text": null,
+          "applies_to": null,
+          "when_due": "at_possession",
+          "covers": []
+        },
+        {
+          "label": "ONE YEAR MAINTENANCE CHARGES",
+          "charge_type": "per_sqft_per_month",
+          "amount": 2.25,
+          "amount_text": null,
+          "applies_to": "/SQFT Per Month",
+          "when_due": "recurring",
+          "covers": []
+        }
+      ],
+      "location_charges": [
+        {
+          "label_as_printed": "PREFERENTIAL LOCATION CHARGES – VIEW",
+          "basis": "Per SqFt",
+          "entries": [
+            {
+              "condition_label": "PARK PLC",
+              "rate": 300,
+              "value_text": null
+            },
+            {
+              "condition_label": "CORNER PLC",
+              "rate": 100,
+              "value_text": null
+            },
+            {
+              "condition_label": "YAMUNA FACING",
+              "rate": 1000,
+              "value_text": null
+            }
+          ]
+        },
+        {
+          "label_as_printed": "PREFERENTIAL LOCATION CHARGES - FLOOR",
+          "basis": "Per SqFt",
+          "entries": [
+            {
+              "condition_label": "1st -3rd FLOOR",
+              "rate": 250,
+              "value_text": null
+            },
+            {
+              "condition_label": "4th -6th FLOOR",
+              "rate": 200,
+              "value_text": null
+            },
+            {
+              "condition_label": "7th-9th FLOOR",
+              "rate": 150,
+              "value_text": null
+            },
+            {
+              "condition_label": "10th-12th FLOOR",
+              "rate": 100,
+              "value_text": null
+            },
+            {
+              "condition_label": "12A AND ABOVE",
+              "rate": null,
+              "value_text": "NIL"
+            }
+          ]
+        }
+      ],
+      "floor_pricing": [],
+      "unit_inventory": [],
+      "price_ranges": [],
+      "conditions": [
+        "REGISTRY AND GOVERNMENT CHARGES ON POSSESSION AS APPLICABLE.",
+        "CHEQUE IN FAVOUR OF “OASIS REALTECH PVT LTD ARD ESCROW ACCOUNT”"
+      ]
+    },
+    "payment_plans": [],
+    "terms_and_conditions": []
+  },
+  "validation": {
+    "status": "auto_approved",
+    "review_required": false,
+    "review_reasons": [],
+    "checks": [],
+    "derived_signals": {}
+  }
+}

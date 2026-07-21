@@ -1,0 +1,276 @@
+{
+  "record_type": "payment_plan_extraction",
+  "record_version": "1.0",
+  "project_id": "kvd-wind-park",
+  "created_at_utc": "2026-07-10T10:34:52.081602+00:00",
+  "source": {
+    "file_name": "892-kvd-wind-park-cost-sheet-7509.pdf",
+    "file_path": "/Users/deepeshgupta/payment_plan_pipeline/input_data/892-kvd-wind-park-cost-sheet-7509.pdf"
+  },
+  "extraction": {
+    "document": {
+      "document_type": "price_sheet_with_payment_schedule",
+      "title_as_printed": null,
+      "project_name": null,
+      "extraction_confidence": "high",
+      "confidence_reason": null
+    },
+    "pricing": {
+      "pricing_basis": "per_floor",
+      "rate_psf": null,
+      "rate_psf_applies_to": null,
+      "unit_types": [],
+      "inclusions": [
+        "VIEW PLC: PARK FACING / ROAD FACING INCLUSIVE IN PRICE",
+        "AC'S IN ALL BEDROOMS AND LIVING ROOM INCLUSIVE IN PRICE",
+        "MODULAR KITCHEN INCLUSIVE IN PRICE",
+        "WARDROBES IN ALL BEDROOMS INCLUSIVE IN PRICE",
+        "GEYSERS IN ALL BATHROOMS INCLUSIVE IN PRICE",
+        "LIGHTS AND FANS INCLUSIVE IN PRICE"
+      ],
+      "additional_charges": [
+        {
+          "label": "CAR PARKING",
+          "charge_type": "flat",
+          "amount": 300000,
+          "amount_text": null,
+          "applies_to": null,
+          "when_due": "unspecified",
+          "covers": [
+            "CAR PARKING",
+            "CLUB MEMBERSHIP",
+            "POWER BACKUP (UP TO 1KVA)",
+            "EEC & FFC"
+          ]
+        }
+      ],
+      "location_charges": [],
+      "floor_pricing": [
+        {
+          "applies_to": "2BHK - 997, T6 & T7",
+          "basis": "Basic Cost (Semi - Furnished)",
+          "column_headers": [
+            "UNIT NOS. 1, 2, 5 & 6",
+            "T6 - UNIT NOS. 3, 7 & 8",
+            "T7 - UNIT NOS. 3, 4 & 7",
+            "UNIT NO. T6 - 4 / T7 - 8"
+          ],
+          "rows": [
+            {
+              "floor_label": "24TH",
+              "cells": [
+                {
+                  "column_label": "UNIT NOS. 1, 2, 5 & 6",
+                  "value": 7875500,
+                  "value_text": null,
+                  "breakdown": []
+                },
+                {
+                  "column_label": "T6 - UNIT NOS. 3, 7 & 8",
+                  "value": 7875500,
+                  "value_text": null,
+                  "breakdown": []
+                },
+                {
+                  "column_label": "T7 - UNIT NOS. 3, 4 & 7",
+                  "value": 7875500,
+                  "value_text": null,
+                  "breakdown": []
+                },
+                {
+                  "column_label": "UNIT NO. T6 - 4 / T7 - 8",
+                  "value": 7875500,
+                  "value_text": null,
+                  "breakdown": []
+                }
+              ]
+            },
+            {
+              "floor_label": "13 TO 23",
+              "cells": [
+                {
+                  "column_label": "UNIT NOS. 1, 2, 5 & 6",
+                  "value": 8074500,
+                  "value_text": null,
+                  "breakdown": []
+                },
+                {
+                  "column_label": "T6 - UNIT NOS. 3, 7 & 8",
+                  "value": 7875500,
+                  "value_text": null,
+                  "breakdown": []
+                },
+                {
+                  "column_label": "T7 - UNIT NOS. 3, 4 & 7",
+                  "value": 7975500,
+                  "value_text": null,
+                  "breakdown": []
+                },
+                {
+                  "column_label": "UNIT NO. T6 - 4 / T7 - 8",
+                  "value": 7975500,
+                  "value_text": null,
+                  "breakdown": []
+                }
+              ]
+            },
+            {
+              "floor_label": "1 TO 12",
+              "cells": [
+                {
+                  "column_label": "UNIT NOS. 1, 2, 5 & 6",
+                  "value": 8174500,
+                  "value_text": null,
+                  "breakdown": []
+                },
+                {
+                  "column_label": "T6 - UNIT NOS. 3, 7 & 8",
+                  "value": 7975500,
+                  "value_text": null,
+                  "breakdown": []
+                },
+                {
+                  "column_label": "T7 - UNIT NOS. 3, 4 & 7",
+                  "value": 7975500,
+                  "value_text": null,
+                  "breakdown": []
+                },
+                {
+                  "column_label": "UNIT NO. T6 - 4 / T7 - 8",
+                  "value": 7975500,
+                  "value_text": null,
+                  "breakdown": []
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "unit_inventory": [],
+      "price_ranges": [],
+      "conditions": [
+        "Registration, stamp duty charges, service tax, GST and any other taxes/cess extra as per applicable rates. Cost of registering Agreement to sell/sublease or Builder Buyer Agreement as per RERA guidelines will be borne by the buyer.",
+        "In addition to the above mentioned charges, an extra charges for electricity, gas, water/sewerage connection, dual meters, or any other services will be applied at the time of the offer of possession.",
+        "The building plans and unit sizes are tentative. The company reserves the right to make changes, modifications, alterations, and additions as deemed necessary, or as required by the Company, the Government/GNIDA, or any other Local Authority or Body having the same jurisdiction of the property.",
+        "Cost of registering Agreement to Sell/sublease or Builder Buyer Agreement as per RERA guidelines will be borne by the buyer.",
+        "If applicable, the buyer of the property should deduct and deposit TDS @ 1% of the sale price in accordance with the provisions of Income Tax Act. Please ensure that TDS is deposited and receipt shared with the company within one month of the payment made to claim the credit."
+      ]
+    },
+    "payment_plans": [
+      {
+        "plan_name_as_printed": "CONSTRUCTION LINKED PLAN - (TOWER 6 & 7)",
+        "plan_type_proposed": "construction_linked",
+        "milestones": [
+          {
+            "sr_no": 1,
+            "label": "AT THE TIME OF BOOKING (CUSTOMER)",
+            "value": 10,
+            "value_type": "percentage",
+            "value_text": "10% OF BASIC COST"
+          },
+          {
+            "sr_no": 2,
+            "label": "WITHIN 45 DAYS OF BOOKING",
+            "value": 30,
+            "value_type": "percentage",
+            "value_text": "30% OF BASIC COST"
+          },
+          {
+            "sr_no": 3,
+            "label": "ON COMPLETION OF STRUCTURE",
+            "value": 20,
+            "value_type": "percentage",
+            "value_text": "20% OF BASIC COST"
+          },
+          {
+            "sr_no": 4,
+            "label": "ON COMPLETION OF ELECTRICAL WORK",
+            "value": 5,
+            "value_type": "percentage",
+            "value_text": "5% OF BASIC COST"
+          },
+          {
+            "sr_no": 5,
+            "label": "ON COMPLETION OF PLUMBING WORK",
+            "value": 5,
+            "value_type": "percentage",
+            "value_text": "5% OF BASIC COST"
+          },
+          {
+            "sr_no": 6,
+            "label": "ON COMPLETION OF EXTERNAL PLASTER",
+            "value": 5,
+            "value_type": "percentage",
+            "value_text": "5% OF BASIC COST"
+          },
+          {
+            "sr_no": 7,
+            "label": "ON COMPLETION OF EXTERNAL PAINT",
+            "value": 5,
+            "value_type": "percentage",
+            "value_text": "5% OF BASIC COST"
+          },
+          {
+            "sr_no": 8,
+            "label": "ON SUBMISSION OF OCCUPANCY CERTIFICATE (OC) APPLICATION",
+            "value": null,
+            "value_type": "percentage_plus_amount",
+            "value_text": "10% OF BASIC COST & 100% OF OTHER CHARGES"
+          },
+          {
+            "sr_no": 9,
+            "label": "ON OFFER OF POSSESSION",
+            "value": 10,
+            "value_type": "percentage",
+            "value_text": "10% OF BASIC COST"
+          }
+        ],
+        "milestones_total_printed": 100,
+        "conditions": [],
+        "applies_to": "2BHK - 997",
+        "notes": null,
+        "plan_type_validated": "other_unclassified"
+      }
+    ],
+    "terms_and_conditions": [
+      "Prices are subject to change without any prior notice at the sole discretion of the company. The company reserves the right to withdraw the price list and payment plan at its sole discretion without any prior notice.",
+      "The building plans and unit sizes are tentative. The company reserves the right to make changes, modifications, alterations, and additions as deemed necessary, or as required by the Company, the Government/GNIDA, or any other Local Authority or Body having the same jurisdiction of the property.",
+      "Booking is subject to detailed terms and conditions as given in Application Form and Agreement to Sell/sublease or Builder Buyer Agreement.",
+      "Registration, stamp duty charges, service tax, GST and any other taxes/cess extra as per applicable rates. Cost of registering Agreement to sell/sublease or Builder Buyer Agreement as per RERA guidelines will be borne by the buyer.",
+      "Cost of registering Agreement to Sell/sublease or Builder Buyer Agreement as per RERA guidelines will be borne by the buyer.",
+      "All parking shall be allotted at the sole discretion of the company. It can be mechanical or non-mechanical depending upon the technical feasibility of the project.",
+      "All payments to be made in favor of “M/s K. V. Developers Pvt. Ltd. - Collection Account”, payable at Noida. HDFC Bank, A/c No: 57500001513875, IFSC: HDFC0000088. Branch Name: Ansals Fortune Arcade, K-Block, Sector-18, Noida U.P. – 201301.",
+      "Mandatory documents required for Booking - PAN Card, Address Proof & Photograph.",
+      "Price ruling on the date of booking shall be applicable. Prices are firm and escalation free.",
+      "All specifications such as Designs, Layout, Conditions are only indicative & subject to change at the discretion of the company or architect or any other competent authority.",
+      "In addition to the above mentioned charges, an extra charges for electricity, gas, water/sewerage connection, dual meters, or any other services will be applied at the time of the offer of possession.",
+      "Cancellations, interest and refund will be as per terms and conditions set out in the application form and agreement to sell/sublease. Any amount to be paid in terms of taxes to the government or authority concerned shall not be refunded.",
+      "If applicable, the buyer of the property should deduct and deposit TDS @ 1% of the sale price in accordance with the provisions of Income Tax Act. Please ensure that TDS is deposited and receipt shared with the company within one month of the payment made to claim the credit.",
+      "The terms and conditions stated herein are only indicative and may subject to change and detailed terms and conditions related to property purchase are included in the Builder Buyer Agreement."
+    ]
+  },
+  "validation": {
+    "status": "review_required",
+    "review_required": true,
+    "review_reasons": [
+      "CONSTRUCTION LINKED PLAN - (TOWER 6 & 7): contains text/compound milestones — human review before publish.",
+      "CONSTRUCTION LINKED PLAN - (TOWER 6 & 7): plan type could not be confirmed deterministically."
+    ],
+    "checks": [
+      {
+        "check": "CONSTRUCTION LINKED PLAN - (TOWER 6 & 7): percentage_sum",
+        "result": "skip",
+        "detail": "Plan contains non-percentage milestones (['percentage', 'percentage_plus_amount']); sum-to-100 not applicable."
+      },
+      {
+        "check": "CONSTRUCTION LINKED PLAN - (TOWER 6 & 7): plan_type_confirmation",
+        "result": "warn",
+        "detail": "Structure inconclusive; model proposed 'construction_linked'."
+      }
+    ],
+    "derived_signals": {
+      "construction_status_inferred": "under_construction",
+      "status_inference_basis": "GST line/condition present"
+    }
+  }
+}

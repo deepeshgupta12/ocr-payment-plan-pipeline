@@ -1,0 +1,673 @@
+{
+  "record_type": "payment_plan_extraction",
+  "record_version": "1.0",
+  "project_id": "sukhwani-sepia",
+  "created_at_utc": "2026-07-10T10:37:34.657752+00:00",
+  "source": {
+    "file_name": "2285-2285-sepia-new-cs-1003.pdf",
+    "file_path": "/Users/deepeshgupta/payment_plan_pipeline/input_data/2285-2285-sepia-new-cs-1003.pdf"
+  },
+  "extraction": {
+    "document": {
+      "document_type": "price_sheet_only",
+      "title_as_printed": "Building B4-A2 & C2-C3 COST SHEET",
+      "project_name": "Sukhwani Sepia",
+      "extraction_confidence": "high",
+      "confidence_reason": null
+    },
+    "pricing": {
+      "pricing_basis": "per_floor",
+      "rate_psf": null,
+      "rate_psf_applies_to": null,
+      "unit_types": [
+        {
+          "unit_label": "2 BHK",
+          "rate_psf": null,
+          "sba_sqft": 755,
+          "sba_unit": "Sq.ft",
+          "carpet_sqft": null,
+          "carpet_unit": null,
+          "balcony_sqft": null,
+          "balcony_unit": null,
+          "components": [],
+          "agreement_value": null,
+          "gst_rate_percent": null,
+          "gst_amount": null,
+          "grand_total": null,
+          "grand_total_label_as_printed": null
+        },
+        {
+          "unit_label": "2 BHK",
+          "rate_psf": null,
+          "sba_sqft": 805,
+          "sba_unit": "Sq.ft",
+          "carpet_sqft": null,
+          "carpet_unit": null,
+          "balcony_sqft": null,
+          "balcony_unit": null,
+          "components": [],
+          "agreement_value": null,
+          "gst_rate_percent": null,
+          "gst_amount": null,
+          "grand_total": null,
+          "grand_total_label_as_printed": null
+        },
+        {
+          "unit_label": "3BHK",
+          "rate_psf": null,
+          "sba_sqft": 1064,
+          "sba_unit": "Sq.ft",
+          "carpet_sqft": null,
+          "carpet_unit": null,
+          "balcony_sqft": null,
+          "balcony_unit": null,
+          "components": [],
+          "agreement_value": null,
+          "gst_rate_percent": null,
+          "gst_amount": null,
+          "grand_total": null,
+          "grand_total_label_as_printed": null
+        },
+        {
+          "unit_label": "3BHK",
+          "rate_psf": null,
+          "sba_sqft": 1118,
+          "sba_unit": "Sq.ft",
+          "carpet_sqft": null,
+          "carpet_unit": null,
+          "balcony_sqft": null,
+          "balcony_unit": null,
+          "components": [],
+          "agreement_value": null,
+          "gst_rate_percent": null,
+          "gst_amount": null,
+          "grand_total": null,
+          "grand_total_label_as_printed": null
+        }
+      ],
+      "inclusions": [],
+      "additional_charges": [
+        {
+          "label": "Legal charges",
+          "charge_type": "flat",
+          "amount": 18500,
+          "amount_text": null,
+          "applies_to": null,
+          "when_due": "at_booking",
+          "covers": []
+        },
+        {
+          "label": "Maintenance charge",
+          "charge_type": "conditional",
+          "amount": null,
+          "amount_text": "₹1.5 Lacs for 2 BHK & ₹2 Lacs for 3 BHK for 24 months",
+          "applies_to": null,
+          "when_due": "at_possession",
+          "covers": []
+        },
+        {
+          "label": "APF charges",
+          "charge_type": "flat",
+          "amount": 25000,
+          "amount_text": null,
+          "applies_to": null,
+          "when_due": "unspecified",
+          "covers": []
+        }
+      ],
+      "location_charges": [],
+      "floor_pricing": [
+        {
+          "applies_to": "2 BHK",
+          "basis": "Total Cost",
+          "column_headers": [
+            "755",
+            "805"
+          ],
+          "rows": [
+            {
+              "floor_label": "1st to 4th Floor",
+              "cells": [
+                {
+                  "column_label": "755",
+                  "value": 10200370,
+                  "value_text": null,
+                  "breakdown": [
+                    {
+                      "label": "Agreement Cost",
+                      "value": 9080687,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Stamp Duty (7%)",
+                      "value": 635649,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Registration Charges",
+                      "value": 30000,
+                      "value_text": null
+                    },
+                    {
+                      "label": "GST (5%)",
+                      "value": 454034,
+                      "value_text": null
+                    }
+                  ]
+                },
+                {
+                  "column_label": "805",
+                  "value": 10700978,
+                  "value_text": null,
+                  "breakdown": [
+                    {
+                      "label": "Agreement Cost",
+                      "value": 9527658,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Stamp Duty (7%)",
+                      "value": 666937,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Registration Charges",
+                      "value": 30000,
+                      "value_text": null
+                    },
+                    {
+                      "label": "GST (5%)",
+                      "value": 476383,
+                      "value_text": null
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "floor_label": "5th to 10th Floor",
+              "cells": [
+                {
+                  "column_label": "755",
+                  "value": 10280871,
+                  "value_text": null,
+                  "breakdown": [
+                    {
+                      "label": "Agreement Cost",
+                      "value": 9152563,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Stamp Duty (7%)",
+                      "value": 640680,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Registration Charges",
+                      "value": 30000,
+                      "value_text": null
+                    },
+                    {
+                      "label": "GST (5%)",
+                      "value": 457628,
+                      "value_text": null
+                    }
+                  ]
+                },
+                {
+                  "column_label": "805",
+                  "value": 10780499,
+                  "value_text": null,
+                  "breakdown": [
+                    {
+                      "label": "Agreement Cost",
+                      "value": 9598659,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Stamp Duty (7%)",
+                      "value": 671907,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Registration Charges",
+                      "value": 30000,
+                      "value_text": null
+                    },
+                    {
+                      "label": "GST (5%)",
+                      "value": 479933,
+                      "value_text": null
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "floor_label": "11th to 15th Floor",
+              "cells": [
+                {
+                  "column_label": "755",
+                  "value": 10360188,
+                  "value_text": null,
+                  "breakdown": [
+                    {
+                      "label": "Agreement Cost",
+                      "value": 9223382,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Stamp Duty (7%)",
+                      "value": 645637,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Registration Charges",
+                      "value": 30000,
+                      "value_text": null
+                    },
+                    {
+                      "label": "GST (5%)",
+                      "value": 461169,
+                      "value_text": null
+                    }
+                  ]
+                },
+                {
+                  "column_label": "805",
+                  "value": 10880216,
+                  "value_text": null,
+                  "breakdown": [
+                    {
+                      "label": "Agreement Cost",
+                      "value": 9687692,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Stamp Duty (7%)",
+                      "value": 678139,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Registration Charges",
+                      "value": 30000,
+                      "value_text": null
+                    },
+                    {
+                      "label": "GST (5%)",
+                      "value": 484385,
+                      "value_text": null
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "floor_label": "16th to 22th Floor",
+              "cells": [
+                {
+                  "column_label": "755",
+                  "value": 10440690,
+                  "value_text": null,
+                  "breakdown": [
+                    {
+                      "label": "Agreement Cost",
+                      "value": 9295258,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Stamp Duty (7%)",
+                      "value": 650669,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Registration Charges",
+                      "value": 30000,
+                      "value_text": null
+                    },
+                    {
+                      "label": "GST (5%)",
+                      "value": 464763,
+                      "value_text": null
+                    }
+                  ]
+                },
+                {
+                  "column_label": "805",
+                  "value": 10940803,
+                  "value_text": null,
+                  "breakdown": [
+                    {
+                      "label": "Agreement Cost",
+                      "value": 9741788,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Stamp Duty (7%)",
+                      "value": 681926,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Registration Charges",
+                      "value": 30000,
+                      "value_text": null
+                    },
+                    {
+                      "label": "GST (5%)",
+                      "value": 487089,
+                      "value_text": null
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "applies_to": "3BHK",
+          "basis": "Total Cost",
+          "column_headers": [
+            "1064",
+            "1118"
+          ],
+          "rows": [
+            {
+              "floor_label": "1st to 4th Floor",
+              "cells": [
+                {
+                  "column_label": "1064",
+                  "value": 14377828,
+                  "value_text": null,
+                  "breakdown": [
+                    {
+                      "label": "Agreement Cost",
+                      "value": 12810560,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Stamp Duty (7%)",
+                      "value": 896740,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Registration Charges",
+                      "value": 30000,
+                      "value_text": null
+                    },
+                    {
+                      "label": "GST (5%)",
+                      "value": 640528,
+                      "value_text": null
+                    }
+                  ]
+                },
+                {
+                  "column_label": "1118",
+                  "value": 15106007,
+                  "value_text": null,
+                  "breakdown": [
+                    {
+                      "label": "Agreement Cost",
+                      "value": 13460720,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Stamp Duty (7%)",
+                      "value": 942251,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Registration Charges",
+                      "value": 30000,
+                      "value_text": null
+                    },
+                    {
+                      "label": "GST (5%)",
+                      "value": 673036,
+                      "value_text": null
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "floor_label": "5th to 10th Floor",
+              "cells": [
+                {
+                  "column_label": "1064",
+                  "value": 14461245,
+                  "value_text": null,
+                  "breakdown": [
+                    {
+                      "label": "Agreement Cost",
+                      "value": 12885040,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Stamp Duty (7%)",
+                      "value": 901953,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Registration Charges",
+                      "value": 30000,
+                      "value_text": null
+                    },
+                    {
+                      "label": "GST (5%)",
+                      "value": 644252,
+                      "value_text": null
+                    }
+                  ]
+                },
+                {
+                  "column_label": "1118",
+                  "value": 15188399,
+                  "value_text": null,
+                  "breakdown": [
+                    {
+                      "label": "Agreement Cost",
+                      "value": 13534284,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Stamp Duty (7%)",
+                      "value": 947400,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Registration Charges",
+                      "value": 30000,
+                      "value_text": null
+                    },
+                    {
+                      "label": "GST (5%)",
+                      "value": 676714,
+                      "value_text": null
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "floor_label": "11th to 15th Floor",
+              "cells": [
+                {
+                  "column_label": "1064",
+                  "value": 14544663,
+                  "value_text": null,
+                  "breakdown": [
+                    {
+                      "label": "Agreement Cost",
+                      "value": 12959520,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Stamp Duty (7%)",
+                      "value": 907167,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Registration Charges",
+                      "value": 30000,
+                      "value_text": null
+                    },
+                    {
+                      "label": "GST (5%)",
+                      "value": 647976,
+                      "value_text": null
+                    }
+                  ]
+                },
+                {
+                  "column_label": "1118",
+                  "value": 15269038,
+                  "value_text": null,
+                  "breakdown": [
+                    {
+                      "label": "Agreement Cost",
+                      "value": 13606284,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Stamp Duty (7%)",
+                      "value": 952440,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Registration Charges",
+                      "value": 30000,
+                      "value_text": null
+                    },
+                    {
+                      "label": "GST (5%)",
+                      "value": 680314,
+                      "value_text": null
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "floor_label": "16th to 22th Floor",
+              "cells": [
+                {
+                  "column_label": "1064",
+                  "value": 14628080,
+                  "value_text": null,
+                  "breakdown": [
+                    {
+                      "label": "Agreement Cost",
+                      "value": 13034000,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Stamp Duty (7%)",
+                      "value": 912380,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Registration Charges",
+                      "value": 30000,
+                      "value_text": null
+                    },
+                    {
+                      "label": "GST (5%)",
+                      "value": 651700,
+                      "value_text": null
+                    }
+                  ]
+                },
+                {
+                  "column_label": "1118",
+                  "value": 15349677,
+                  "value_text": null,
+                  "breakdown": [
+                    {
+                      "label": "Agreement Cost",
+                      "value": 13678283,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Stamp Duty (7%)",
+                      "value": 957480,
+                      "value_text": null
+                    },
+                    {
+                      "label": "Registration Charges",
+                      "value": 30000,
+                      "value_text": null
+                    },
+                    {
+                      "label": "GST (5%)",
+                      "value": 683914,
+                      "value_text": null
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "unit_inventory": [],
+      "price_ranges": [],
+      "conditions": [
+        "The total cost mentioned here is all inclusive of GST, Registration, Stamp Duty",
+        "GST, Stamp duty, Registration charges, and all applicable government charges are as per the current rates, and in future, it may change as per government notification which would be borne by the customer",
+        "Above areas are shown in square feet only to make it easy for the purchaser to understand. The sale of the said unit is on the basis of RERA carpet area and all legal documents will be executed in square meter only.",
+        "Additional floor rise is applicable from 5th floor and onward",
+        "The promoters reserve the right to change the above prices and the offer given at any time without prior notice",
+        "For any Home Loan sanction taken outside of the in-house Banking Team APF charges of Rs. 25,000/- will be applicable.",
+        "Agreement to be executed & registered within 15 days from the date of booking. Entire amount of Stamp duty & Registration to be paid within 7 days from the time of bookin"
+      ]
+    },
+    "payment_plans": [],
+    "terms_and_conditions": [
+      "Agreement to be executed & registered within 15 days from the date of booking. Entire amount of Stamp duty & Registration to be paid within 7 days from the time of bookin",
+      "The total cost mentioned here is all inclusive of GST, Registration, Stamp Duty",
+      "GST, Stamp duty, Registration charges, and all applicable government charges are as per the current rates, and in future, it may change as per government notification which would be borne by the customer",
+      "Above areas are shown in square feet only to make it easy for the purchaser to understand. The sale of the said unit is on the basis of RERA carpet area and all legal documents will be executed in square meter only.",
+      "Legal charges ₹18,500/- to be paid by the customer at the time of agreement",
+      "Maintenance charge is ₹1.5 Lacs for 2 BHK & ₹2 Lacs for 3 BHK for 24 months and to be paid at the time of possession by the customer",
+      "Additional floor rise is applicable from 5th floor and onward",
+      "The promoters reserve the right to change the above prices and the offer given at any time without prior notice",
+      "Prior to registration of the agreement, if the booking is cancelled then the amount paid will be returned without any interest after a deduction of ₹1,00,000 from the cost of the said unit as cancellation charges.",
+      "Booking is non-transferable",
+      "The information on this paper is provided in good faith and does not constitute part of the contract",
+      "Documents required : PAN Card, Adhar Card, Photocopy",
+      "For any Home Loan sanction taken outside of the in-house Banking Team APF charges of Rs. 25,000/- will be applicable."
+    ]
+  },
+  "validation": {
+    "status": "auto_approved",
+    "review_required": false,
+    "review_reasons": [],
+    "checks": [
+      {
+        "check": "2 BHK-755: agreement_value_reconciliation",
+        "result": "skip",
+        "detail": "Missing rate/SBA/component amounts; cannot reconcile."
+      },
+      {
+        "check": "2 BHK-805: agreement_value_reconciliation",
+        "result": "skip",
+        "detail": "Missing rate/SBA/component amounts; cannot reconcile."
+      },
+      {
+        "check": "3BHK-1064: agreement_value_reconciliation",
+        "result": "skip",
+        "detail": "Missing rate/SBA/component amounts; cannot reconcile."
+      },
+      {
+        "check": "3BHK-1118: agreement_value_reconciliation",
+        "result": "skip",
+        "detail": "Missing rate/SBA/component amounts; cannot reconcile."
+      }
+    ],
+    "derived_signals": {
+      "construction_status_inferred": "under_construction",
+      "status_inference_basis": "GST line/condition present"
+    }
+  }
+}

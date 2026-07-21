@@ -1,0 +1,529 @@
+{
+  "record_type": "payment_plan_extraction",
+  "record_version": "1.0",
+  "project_id": "stellar-one",
+  "created_at_utc": "2026-07-10T10:38:23.160804+00:00",
+  "source": {
+    "file_name": "5354-stellar-one-2-cost-sheet-3496.pdf",
+    "file_path": "/Users/deepeshgupta/payment_plan_pipeline/input_data/5354-stellar-one-2-cost-sheet-3496.pdf"
+  },
+  "extraction": {
+    "document": {
+      "document_type": "price_sheet_with_payment_schedule",
+      "title_as_printed": "PRICE LIST & PAYMENT PLAN (with effect from 20/03/2026)",
+      "project_name": "STELLAR ONE PHASE III",
+      "extraction_confidence": "high",
+      "confidence_reason": null
+    },
+    "pricing": {
+      "pricing_basis": "per_unit_type",
+      "rate_psf": null,
+      "rate_psf_applies_to": null,
+      "unit_types": [
+        {
+          "unit_label": "3BHK Type I (1800)",
+          "rate_psf": null,
+          "sba_sqft": null,
+          "sba_unit": null,
+          "carpet_sqft": 1029.15,
+          "carpet_unit": "Sq. Ft.",
+          "balcony_sqft": 233.04,
+          "balcony_unit": "Sq. Ft.",
+          "components": [],
+          "agreement_value": null,
+          "gst_rate_percent": null,
+          "gst_amount": null,
+          "grand_total": null,
+          "grand_total_label_as_printed": null
+        },
+        {
+          "unit_label": "3BHK Type III (2020)",
+          "rate_psf": null,
+          "sba_sqft": null,
+          "sba_unit": null,
+          "carpet_sqft": 1163.27,
+          "carpet_unit": "Sq. Ft.",
+          "balcony_sqft": 257.69,
+          "balcony_unit": "Sq. Ft.",
+          "components": [],
+          "agreement_value": null,
+          "gst_rate_percent": null,
+          "gst_amount": null,
+          "grand_total": null,
+          "grand_total_label_as_printed": null
+        },
+        {
+          "unit_label": "3BHK Type IV (2010)",
+          "rate_psf": null,
+          "sba_sqft": null,
+          "sba_unit": null,
+          "carpet_sqft": 1163.27,
+          "carpet_unit": "Sq. Ft.",
+          "balcony_sqft": 246.39,
+          "balcony_unit": "Sq. Ft.",
+          "components": [],
+          "agreement_value": null,
+          "gst_rate_percent": null,
+          "gst_amount": null,
+          "grand_total": null,
+          "grand_total_label_as_printed": null
+        }
+      ],
+      "inclusions": [],
+      "additional_charges": [
+        {
+          "label": "1 Covered Parking",
+          "charge_type": "flat",
+          "amount": 0,
+          "amount_text": "Free",
+          "applies_to": null,
+          "when_due": "at_possession",
+          "covers": []
+        },
+        {
+          "label": "IGL Infrastructure Development Charges",
+          "charge_type": "flat",
+          "amount": 0,
+          "amount_text": "Free",
+          "applies_to": null,
+          "when_due": "at_possession",
+          "covers": []
+        },
+        {
+          "label": "Fibre Optic Cable Infrastructure",
+          "charge_type": "flat",
+          "amount": 0,
+          "amount_text": "Free",
+          "applies_to": null,
+          "when_due": "at_possession",
+          "covers": []
+        },
+        {
+          "label": "IFMS",
+          "charge_type": "flat",
+          "amount": 0,
+          "amount_text": "Free",
+          "applies_to": null,
+          "when_due": "at_possession",
+          "covers": []
+        },
+        {
+          "label": "One Time Lease Rent",
+          "charge_type": "flat",
+          "amount": 150000,
+          "amount_text": null,
+          "applies_to": null,
+          "when_due": "at_possession",
+          "covers": []
+        },
+        {
+          "label": "Club Membership",
+          "charge_type": "flat",
+          "amount": 200000,
+          "amount_text": null,
+          "applies_to": null,
+          "when_due": "at_possession",
+          "covers": []
+        },
+        {
+          "label": "EEC/FFC",
+          "charge_type": "flat",
+          "amount": 50000,
+          "amount_text": null,
+          "applies_to": null,
+          "when_due": "at_possession",
+          "covers": []
+        },
+        {
+          "label": "Additional Car parking (Subject to availability)",
+          "charge_type": "flat",
+          "amount": 450000,
+          "amount_text": null,
+          "applies_to": null,
+          "when_due": "at_possession",
+          "covers": []
+        },
+        {
+          "label": "Power Backup (Per KVA)",
+          "charge_type": "per_kva",
+          "amount": 25000,
+          "amount_text": null,
+          "applies_to": null,
+          "when_due": "at_possession",
+          "covers": []
+        }
+      ],
+      "location_charges": [],
+      "floor_pricing": [],
+      "unit_inventory": [
+        {
+          "tower": "Tower - A",
+          "floor": "3rd",
+          "unit_type": "3BHK Type I (1800)",
+          "unit_address": "A-306",
+          "basic_price": 20367360
+        },
+        {
+          "tower": "Tower - A",
+          "floor": "4th",
+          "unit_type": "3BHK Type III (2020)",
+          "unit_address": "A-405",
+          "basic_price": 23008204
+        },
+        {
+          "tower": "Tower - A",
+          "floor": "4th",
+          "unit_type": "3BHK Type I (1800)",
+          "unit_address": "A-406",
+          "basic_price": 20367360
+        },
+        {
+          "tower": "Tower - A",
+          "floor": "5th",
+          "unit_type": "3BHK Type III (2020)",
+          "unit_address": "A-505",
+          "basic_price": 23008204
+        },
+        {
+          "tower": "Tower - A",
+          "floor": "5th",
+          "unit_type": "3BHK Type II (2020)",
+          "unit_address": "A-508",
+          "basic_price": 21888855
+        },
+        {
+          "tower": "Tower - A",
+          "floor": "6th",
+          "unit_type": "3BHK Type III (2020)",
+          "unit_address": "A-605",
+          "basic_price": 22907204
+        },
+        {
+          "tower": "Tower - A",
+          "floor": "7th",
+          "unit_type": "3BHK Type III (2020)",
+          "unit_address": "A-705",
+          "basic_price": 22907204
+        },
+        {
+          "tower": "Tower - A",
+          "floor": "8th",
+          "unit_type": "3BHK Type III (2020)",
+          "unit_address": "A-805",
+          "basic_price": 22907204
+        },
+        {
+          "tower": "Tower - A",
+          "floor": "9th",
+          "unit_type": "3BHK Type III (2020)",
+          "unit_address": "A-905",
+          "basic_price": 22907204
+        },
+        {
+          "tower": "Tower - A",
+          "floor": "10th",
+          "unit_type": "3BHK Type I (1800)",
+          "unit_address": "A-1006",
+          "basic_price": 20007360
+        },
+        {
+          "tower": "Tower - A",
+          "floor": "14th",
+          "unit_type": "3BHK Type III (2020)",
+          "unit_address": "A-1408",
+          "basic_price": 20845188
+        },
+        {
+          "tower": "Tower - B",
+          "floor": "3rd",
+          "unit_type": "3BHK Type III (2020)",
+          "unit_address": "B-305",
+          "basic_price": 23092371
+        },
+        {
+          "tower": "Tower - B",
+          "floor": "5th",
+          "unit_type": "3BHK Type III (2020)",
+          "unit_address": "B-505",
+          "basic_price": 23092371
+        },
+        {
+          "tower": "Tower - B",
+          "floor": "5th",
+          "unit_type": "3BHK Type II (2020)",
+          "unit_address": "B-508",
+          "basic_price": 23092371
+        },
+        {
+          "tower": "Tower - B",
+          "floor": "7th",
+          "unit_type": "3BHK Type III (2020)",
+          "unit_address": "B-705",
+          "basic_price": 22924037
+        },
+        {
+          "tower": "Tower - B",
+          "floor": "9th",
+          "unit_type": "3BHK Type III (2020)",
+          "unit_address": "B-908",
+          "basic_price": 22924037
+        },
+        {
+          "tower": "Tower - B",
+          "floor": "12th",
+          "unit_type": "3BHK Type III (2020)",
+          "unit_address": "B-1208",
+          "basic_price": 22528454
+        },
+        {
+          "tower": "Tower - B",
+          "floor": "14th",
+          "unit_type": "3BHK Type III (2020)",
+          "unit_address": "B-1408",
+          "basic_price": 22250704
+        },
+        {
+          "tower": "Tower - B",
+          "floor": "17th",
+          "unit_type": "3BHK Type IV (2010)",
+          "unit_address": "B-1708",
+          "basic_price": 21537552
+        },
+        {
+          "tower": "Tower - C",
+          "floor": "3rd",
+          "unit_type": "3BHK Type I (1800)",
+          "unit_address": "C-307",
+          "basic_price": 20547360
+        },
+        {
+          "tower": "Tower - C",
+          "floor": "3rd",
+          "unit_type": "3BHK Type III (2020)",
+          "unit_address": "C-308",
+          "basic_price": 23260704
+        },
+        {
+          "tower": "Tower - C",
+          "floor": "4th",
+          "unit_type": "3BHK Type III (2020)",
+          "unit_address": "C-408",
+          "basic_price": 23260704
+        },
+        {
+          "tower": "Tower - C",
+          "floor": "5th",
+          "unit_type": "3BHK Type II (2020)",
+          "unit_address": "C-504",
+          "basic_price": 22191855
+        },
+        {
+          "tower": "Tower - C",
+          "floor": "5th",
+          "unit_type": "3BHK Type III (2020)",
+          "unit_address": "C-508",
+          "basic_price": 23260704
+        },
+        {
+          "tower": "Tower - C",
+          "floor": "6th",
+          "unit_type": "3BHK Type III (2020)",
+          "unit_address": "C-604",
+          "basic_price": 22259188
+        },
+        {
+          "tower": "Tower - C",
+          "floor": "6th",
+          "unit_type": "3BHK Type III (2020)",
+          "unit_address": "C-608",
+          "basic_price": 22980833
+        },
+        {
+          "tower": "Tower - C",
+          "floor": "7th",
+          "unit_type": "3BHK Type III (2020)",
+          "unit_address": "C-704",
+          "basic_price": 22259188
+        },
+        {
+          "tower": "Tower - C",
+          "floor": "7th",
+          "unit_type": "3BHK Type III (2020)",
+          "unit_address": "C-708",
+          "basic_price": 22980833
+        },
+        {
+          "tower": "Tower - C",
+          "floor": "8th",
+          "unit_type": "3BHK Type III (2020)",
+          "unit_address": "C-804",
+          "basic_price": 22259188
+        },
+        {
+          "tower": "Tower - C",
+          "floor": "8th",
+          "unit_type": "3BHK Type III (2020)",
+          "unit_address": "C-808",
+          "basic_price": 22980833
+        },
+        {
+          "tower": "Tower - C",
+          "floor": "9th",
+          "unit_type": "3BHK Type III (2020)",
+          "unit_address": "C-904",
+          "basic_price": 22259188
+        },
+        {
+          "tower": "Tower - C",
+          "floor": "17th",
+          "unit_type": "3BHK Type IV (2010)",
+          "unit_address": "C-1708",
+          "basic_price": 21839052
+        }
+      ],
+      "price_ranges": [],
+      "conditions": [
+        "Electric meter and panel charges for DG backup installation, advance payment for one year of water charges,advance payment for one year of common area maintenance, and advance payment for one year of common area electricity charges.",
+        "All applicable Govt. Taxes additional.",
+        "The Balcony Area mentioned is aggregate of all balconies for the type of flat.",
+        "TDS at a rate of 1% applies to the cost of the apartment exceeding Rs. 50 Lakhs, as per the Income Tax Act, Section 194-IA. For deduction purposes, the company name is Stellar Spring Projects Pvt. Ltd., and the PAN Number is AAOCS2530C. Stamp Duty, Registration and any other applicable charges will be payable, extra."
+      ]
+    },
+    "payment_plans": [
+      {
+        "plan_name_as_printed": "Construction Linked Payment Plan",
+        "plan_type_proposed": "construction_linked",
+        "milestones": [
+          {
+            "sr_no": null,
+            "label": "At the time of Booking",
+            "value": 10,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": null,
+            "label": "within 30 days of booking",
+            "value": 10,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": null,
+            "label": "On the start of construction of foundation",
+            "value": 10,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": null,
+            "label": "On Casting of 1st Floor Slab",
+            "value": 10,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": null,
+            "label": "On Casting of 4th Floor slab",
+            "value": 10,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": null,
+            "label": "On Casting of 7th Floor Slab",
+            "value": 10,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": null,
+            "label": "On Casting of 10 Floor Slab",
+            "value": 10,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": null,
+            "label": "On Casting of 13th Floor Slab",
+            "value": 10,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": null,
+            "label": "On Casting of 17th Floor Slab",
+            "value": 10,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": null,
+            "label": "On filing for Completion Certificate",
+            "value": 5,
+            "value_type": "percentage",
+            "value_text": null
+          },
+          {
+            "sr_no": null,
+            "label": "On offer of Possession",
+            "value": null,
+            "value_type": "percentage_plus_amount",
+            "value_text": "5% + Other charges"
+          }
+        ],
+        "milestones_total_printed": null,
+        "conditions": [],
+        "applies_to": null,
+        "notes": null,
+        "plan_type_validated": "other_unclassified"
+      }
+    ],
+    "terms_and_conditions": [
+      "The Project is registered under UP RERA Registration Number UPRERAPRJ564504/08/2024 and Promoter Name is “Stellar Spring Projects Pvt. Ltd.”",
+      "The Allotee is required to apply directly to NPCL for Electric connection & IGL for gas connection",
+      "All Cheques/Drafts/Online to be issued in favour of “Stellar SPPL Stellar One PH III Col A/C” Remittance through RTGS/NEFT: Account Number - 50200097278195; IFSC Code: HDFC0002649, Bank Name: HDFC Bank Ltd, Branch: Sector- 62, Noida Please provide the full details of fund transferred through email to : supportstellarone@infostellar.com Price List & Payment Plan can be changed without notice at the sole discretion of the Company.",
+      "1 sq.mt. = 10.764 sq.ft.",
+      "Mandatory Documents required for Booking: 1) Pan Card 2) Aadhar Card 3) Two Photos 4) Signature Verification by Bank"
+    ]
+  },
+  "validation": {
+    "status": "review_required",
+    "review_required": true,
+    "review_reasons": [
+      "Construction Linked Payment Plan: contains text/compound milestones — human review before publish.",
+      "Construction Linked Payment Plan: plan type could not be confirmed deterministically."
+    ],
+    "checks": [
+      {
+        "check": "Construction Linked Payment Plan: percentage_sum",
+        "result": "skip",
+        "detail": "Plan contains non-percentage milestones (['percentage', 'percentage_plus_amount']); sum-to-100 not applicable."
+      },
+      {
+        "check": "Construction Linked Payment Plan: plan_type_confirmation",
+        "result": "warn",
+        "detail": "Structure inconclusive; model proposed 'construction_linked'."
+      },
+      {
+        "check": "3BHK Type I (1800)-None: agreement_value_reconciliation",
+        "result": "skip",
+        "detail": "Missing rate/SBA/component amounts; cannot reconcile."
+      },
+      {
+        "check": "3BHK Type III (2020)-None: agreement_value_reconciliation",
+        "result": "skip",
+        "detail": "Missing rate/SBA/component amounts; cannot reconcile."
+      },
+      {
+        "check": "3BHK Type IV (2010)-None: agreement_value_reconciliation",
+        "result": "skip",
+        "detail": "Missing rate/SBA/component amounts; cannot reconcile."
+      }
+    ],
+    "derived_signals": {
+      "construction_status_inferred": "under_construction",
+      "status_inference_basis": "GST line/condition present"
+    }
+  }
+}
