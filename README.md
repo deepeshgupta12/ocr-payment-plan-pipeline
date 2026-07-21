@@ -1,20 +1,87 @@
-# Payment Plan → SEO/AEO Content Pipeline
+# Payment Plan → SEO/AEO Content Engine
 
-Ingests a project payment plan / price sheet (image or PDF), extracts it via
-an OpenAI vision model into a strict JSON structure, validates it
-deterministically, saves the canonical record to the project datacenter, and
-generates PDP-standard SEO/AEO content — with a post-generation numeric
-guardrail.
+Ingests a real-estate project's payment plan or price sheet — as an image or PDF, in whatever format the developer printed it — and turns it into structured data and publish-ready SEO/AEO content for the Project Detail Page (PDP).
 
-## Pipeline
+Built for Square Yards' PDP content family. Uses OpenAI's vision models for extraction (Structured Outputs / strict JSON schema) and text generation for content, with deterministic validation on both ends.
+
+---
+
+## Problem Statement
+
+- Developers publish payment plans and price sheets in wildly inconsistent formats — scanned images, PDFs, price-sheet PDFs with an embedded schedule, multi-plan sheets, tower-wise or unit-wise variants.
+- There is **no fixed structure**: some plans are percentage-based, some are absolute amounts, some are compound ("10% + ₹2L"), some are pure text ("Balance on possession"), and many carry footnote conditions (GST extra, registration extra) that change what content is allowed to say.
+- Manually transcribing these into SEO copy for every project is slow, inconsistent in tone, and error-prone on numbers — and payment-plan errors are a trust/legal issue, not just a content-quality one.
+- The PDP already has a mature, rules-first content system (voice charter, HTML/AEO standards, validation gates) for other sections. Payment plans need to join that family without forcing a shape onto data that doesn't have one.
+
+## Solution
+
+A six-stage pipeline that treats **structured extraction and content generation as two separately-validated problems**, joined by a canonical JSON record:
+
+- **Flexible-by-design schema** — no assumption of a single plan shape. Multiple plans, mixed value types (`percentage` / `amount` / `percentage_plus_amount` / `text`), and a `notes` escape hatch so nothing gets silently dropped or invented.
+- **Vision-model extraction, not OCR** — a vision-capable LLM reads the image/PDF directly into strict JSON (OpenAI Structured Outputs), which handles tables, merged cells, and Hinglish labels far better than OCR + text parsing, and makes parse failures impossible by construction.
+- **Extract verbatim, validate deterministically** — the model is instructed to copy what's printed with zero normalization; a separate, non-LLM validation layer does the arithmetic (percentage sums, price reconciliation, plan-type confirmation) and decides what's safe to auto-publish vs. what needs human review.
+- **Canonical datacenter record** — validated JSON is saved once per project and becomes the single source of truth. Content can be regenerated anytime (charter updates, new AEO formats) without re-touching the source document, and the same record can feed other consumers later (comparison modules, chatbot answers).
+- **Charter-voice content generation with a numeric safety net** — since there's no variable injection here (unlike the rest of the PDP system), every number in the generated content is reconciled back against the source JSON after generation. Anything that doesn't trace to the source blocks publish.
+
+## Agenda
+
+- [x] Design a schema flexible enough for real developer variability (multi-plan sheets, mixed value types, price-sheet-with-schedule documents)
+- [x] Build ingestion for both images and multi-page PDFs (single-request extraction so split tables aren't read as two plans)
+- [x] Implement OpenAI vision extraction with strict Structured Outputs
+- [x] Implement deterministic, per-plan-type validation with a tolerance-aware reconciliation engine
+- [x] Persist validated records to a swappable datacenter client
+- [x] Implement charter-voice SEO/AEO content generation, structure-aware by plan type
+- [x] Implement post-generation numeric reconciliation as the safety net replacing variable injection
+- [ ] Wire in the production Senior Real Estate Writer voice charter v2.0 (currently a placeholder block)
+- [ ] Wire in the real Square Yards datacenter API client (currently a file-based stand-in)
+- [ ] Validate extraction accuracy against a batch of real developer PDFs and tune DPI / prompt as needed
+
+## Process
+
+1. **Ingest** — accept an image or PDF; PDFs are rasterized page-by-page (PyMuPDF) and all pages are sent together so a milestone table split across pages is read as one plan.
+2. **Extract** — a single OpenAI vision call converts the document into the strict JSON schema, instructed to extract verbatim with no normalization, no unit conversion, and no inferred milestones.
+3. **Structure** — the extraction output *is* the structured data (schema-guaranteed); document type (`payment_plan_only` / `price_sheet_with_payment_schedule` / etc.) and plan multiplicity are captured explicitly.
+4. **Validate** — deterministic rules run per plan type: percentage sums to 100 (±0.5 tolerance) only when every milestone is percentage-type; price-sheet arithmetic reconciles component sums, GST, and grand totals (±₹1 rounding tolerance); the model's proposed plan type is confirmed or overridden by structural rules; anything incoherent routes to a review queue instead of failing outright.
+5. **Save** — the validated record, plus the full validation report and internal-only derived signals (e.g. city inferred from utility-board references), is written to the project datacenter as the canonical record.
+6. **Generate** — content generation reads the canonical record (never the raw extraction) and produces charter-voice prose, semantic HTML tables (schedule + pricing), and FAQPage JSON-LD, branching its narrative framing on the confirmed plan type.
+7. **Reconcile** — every number in the generated content is checked against the source JSON (exact lakh/crore restatements allowed); any number that doesn't trace back blocks publish and flags the content for review.
+
+## Flow
+
+```mermaid
+flowchart TD
+    A["Payment plan / price sheet<br/>(image or PDF)"] --> B["Ingest<br/>PDF → page images, native text layer"]
+    B --> C["Extract<br/>OpenAI vision + Structured Outputs<br/>verbatim, no normalization"]
+    C --> D["Structured JSON<br/>payment_plans[] + pricing"]
+    D --> E{"Validate<br/>deterministic rules"}
+    E -- "coherent" --> F["Save to Datacenter<br/>canonical record"]
+    E -- "incoherent" --> R["Review Queue<br/>(record still saved)"]
+    F --> G["Generate Content<br/>charter voice, structure-aware"]
+    G --> H{"Reconcile numbers<br/>vs. source JSON"}
+    H -- "all numbers trace" --> I["Publishable<br/>prose + tables + FAQ JSON-LD"]
+    H -- "unmatched number found" --> R
+    R --> J["Human review"]
+    J --> F
+```
+
+---
+
+## Repository Structure
 
 ```
-Ingest (PDF/image)
-  └─> Extract + Structure   (OpenAI vision, Structured Outputs, verbatim rules)
-        └─> Validate         (deterministic per-plan-type rules, ±1 INR tolerance)
-              └─> Save JSON  (canonical record in project datacenter)
-                    └─> Generate content   (charter voice, structure-aware)
-                          └─> Reconcile numbers (every number must trace to JSON)
+payment_plan_pipeline/
+├── main.py                          # CLI entry point
+├── requirements.txt
+├── payment_pipeline/
+│   ├── config.py                    # models, DPI, tolerances, page caps
+│   ├── schema.py                    # OpenAI Structured Outputs JSON schema
+│   ├── ingest.py                    # image/PDF ingestion, PDF rasterization
+│   ├── extraction.py                # vision extraction call + verbatim prompt
+│   ├── validation.py                # deterministic per-plan-type validation
+│   ├── datacenter.py                # canonical record persistence
+│   ├── content_generation.py        # charter-voice generation + reconciliation
+│   └── pipeline.py                  # orchestrator
+└── sample_data/                     # (add sample payment plan images/PDFs here)
 ```
 
 ## Setup
@@ -24,125 +91,43 @@ pip install -r requirements.txt
 export OPENAI_API_KEY=sk-...
 ```
 
-Put source documents (payment plans / price sheets) in `input_data/`.
-
 ## Usage
 
 ```bash
-python main.py input_data/price_sheet.png --project-id divine-green-leaf
+python main.py path/to/price_sheet.png --project-id divine-green-leaf
 ```
 
-Outputs — each analysis produces a self-contained folder,
-`./output/<project-id>/`, with one file per stage so every step is
-independently inspectable:
+**Outputs:**
+- `./datacenter_store/<project-id>.payment_plan.json` — canonical extraction record (extraction + validation report + derived signals)
+- `./output/<project-id>.content.json` — generated content package (`seo_prose_html`, `payment_schedule_table_html`, `pricing_table_html`, `faq_jsonld`, `meta_description`) with its reconciliation report
 
-| File | Stage | Contents |
-|------|-------|----------|
-| `01_image_analysis/` | Ingest | Rendered page image(s) the vision model saw (`page_N.png`), a `manifest.json`, and `visual_analysis.txt` — an AI description of the document's layout and capture quality |
-| `02_extracted_data.json` | Extract | Raw, verbatim model extraction (pre-validation, no normalisation) |
-| `03_structured_data.json` | Structure + Validate | Extraction reorganised for review, with the deterministic validation report attached |
-| `04_record.json` | Save | Copy of the canonical datacenter record |
-| `05_seo_aeo_content.json` | Generate | Generated content package (`seo_prose_html` as AEO question/answer `<h3>` blocks that double as the on-page FAQ, `payment_schedule_table_html`, `pricing_table_html`, `meta_description`) + reconciliation report |
-| `06_seo_aeo_content.html` | Generate | Standalone, browsable HTML rendering of the content package (prose plus the standalone table blocks), with a status and reconciliation banner. Open it directly in a browser to preview the content |
+If validation routes the record to review, content generation is skipped. After human review, re-run with `--force-generate`.
 
-The canonical record is also written to
-`./datacenter_store/<project-id>.payment_plan.json` (the production
-persistence target).
+## Key Design Decisions
 
-If validation routes the record to review, content generation is skipped and
-`05_seo_aeo_content.json` is not produced. After human review, re-run with
-`--force-generate`.
+| Decision | Why |
+|---|---|
+| No fixed plan structure assumed | Real developer payment plans vary too much for a rigid schema — flexible core (array of plans, discriminated milestone value types) + `notes` escape hatch |
+| Vision LLM over traditional OCR | Preserves table structure directly; traditional OCR loses it and needs messy post-processing |
+| Extract verbatim, normalize never (in the vision call) | Keeps the extraction step auditable; any normalization needed happens later in deterministic code |
+| Validation is per-plan-type, not one-size-fits-all | Sum-to-100 is meaningless for amount- or text-based plans; rules branch on what the plan actually is |
+| Datacenter record is canonical, not the raw extraction | Content can be regenerated on charter/format changes without re-running extraction |
+| Post-generation numeric reconciliation | Free-text generation has no variable injection to guarantee correctness, so every number is checked back against source JSON after the fact |
+| Derived signals (city, construction status) stored, never published | They're for internal master-data cross-checks, not verified facts fit for public content |
 
-## Key design decisions (per spec discussions)
+## Production Integration Points
 
-1. **No fixed plan structure assumed.** `payment_plans` is always an array;
-   milestones carry a `value_type` discriminator (`percentage` / `amount` /
-   `percentage_plus_amount` / `text`); every plan has a `notes` escape hatch.
-   The extraction prompt forbids normalisation — extract what is printed.
-2. **Vision model with Structured Outputs (strict mode).** Parse failures and
-   schema drift are impossible by construction. Multi-page PDFs are sent in a
-   single request so split tables are never read as two partial plans.
-3. **Document-level flexibility.** `document_type` distinguishes pure payment
-   plans from price sheets; price sheets carry a `pricing` block with
-   per-unit-type entries (duplicate unit labels with different SBAs are
-   distinct entries). The `pricing` block also captures, when present:
-   `inclusions` (an "Above Prices Inclusive Of" list), `additional_charges`
-   (levied on top of the quoted price — per-sq-ft rates like lease rent, or
-   flat sums like club membership — kept separate from the agreement-value
-   `components`), and `location_charges` (a floor/facing PLC table). Areas are
-   stored as printed with their unit (`sba_unit` / `carpet_unit`, e.g. `Sq.ft`
-   vs `Sq.mt`) and never converted. When price varies by floor (and optionally
-   by unit position within a tower), it is captured as a `floor_pricing` matrix
-   (floor bands x columns) rather than a single per-unit value; a single
-   combined charge that covers several items records the shared total once with
-   a `covers` list. `location_charges` is an array, so several PLC tables (a
-   view/facing table and a floor table) are kept separate. Each additional
-   charge carries a `charge_type` (`per_sqft`, `per_sqft_per_month`, `per_kw`,
-   `per_kva`, `flat`, `conditional`, `text`) and a `when_due`
-   (`one_time` / `at_booking` / `at_possession` / `recurring` / `unspecified`),
-   so a possession-charges block or a recurring maintenance rate is modelled
-   faithfully. When the basic rate differs by unit or named category (e.g.
-   `Diamond & Emerald` vs `Pearl…`), each `unit_types` entry carries its own
-   `rate_psf`. A `floor_pricing` cell can hold a full cost `breakdown` (Agreement
-   Cost, Stamp Duty, Registration, GST, Total Cost) when the sheet stacks costs
-   per floor band; a separate balcony area is kept in `balcony_sqft` /
-   `balcony_unit`; a per-unit inventory (tower, floor, unit address, basic price)
-   is captured in `unit_inventory`; and a charge shown as "Free" is recorded with
-   `amount` 0 so it reads as complimentary rather than missing. When a price is a
-   low-to-high RANGE that varies by building, configuration, view (e.g. Garden vs
-   Expressway) and/or payment plan across named clusters, each cell is captured
-   in `price_ranges` (`price_low` / `price_high` / `price_unit` / verbatim
-   `price_text`) — even when the table is captioned as a "payment plan", the
-   budgets are treated as pricing so nothing is dropped, and the content renders
-   one complete table per payment plan, built deterministically from
-   `price_ranges` (a safety net over the prompt) so no budget row is ever
-   summarised away. The milestone schedule, the additional-charges table and the
-   buyer-relevant "Good to know" conditions block are rebuilt the same way
-   (directly from the record), so every block carries a description, highlight
-   bullets AND its complete table — the model writes the prose, deterministic
-   code guarantees the rows. A per-unit `rate_psf` (Bren's per-variant rate, Sikka's
-   per-category rate) is used by the arithmetic reconciliation in preference to
-   the sheet-wide rate. Document-level
-   legal text is captured verbatim in a top-level
-   `terms_and_conditions` array (kept in the record for reference and
-   deliberately not fed to content generation, so legalese is never published).
-   Because real buyer charges and pricing conditions are often buried in that
-   T&C/notes prose (maintenance, legal, APF, "the total is inclusive of GST",
-   "Govt taxes additional", "Stamp Duty extra", advance payments at possession),
-   the extraction prompt structures them into `additional_charges` /
-   `pricing.conditions`, and a deterministic post-extraction pass
-   (`enrich_conditions_from_terms`) guarantees pricing-relevant T&C sentences are
-   copied into `pricing.conditions` even when the model misses them — so no
-   buyer-facing charge or condition is silently dropped. Legal boilerplate
-   (cancellation, documents, cheque payee, account/RERA numbers) is excluded.
-   All of these fields are additive: documents without them (e.g. a plain RPSF
-   price sheet) are unaffected.
-4. **Validation = "coherent enough to auto-publish?"** Sum-to-100 applies only
-   to fully-percentage plans; pricing arithmetic reconciles with ±1 INR
-   rounding tolerance; the model *proposes* plan type and the validator
-   *confirms* it structurally — mismatches route to review.
-5. **Datacenter record is canonical.** Content generation reads the saved
-   record, never the raw extraction, so content can be regenerated on charter
-   or format changes without re-touching the source document.
-5a. **No-dash content guarantee.** The content charter forbids hyphens and
-   dashes; on top of that prompt rule, a deterministic post-generation pass
-   strips any dash that survives (e.g. a reproduced label like "Power Back-Up"),
-   operating only on HTML text nodes so tags, attributes and numbers are never
-   touched. The verbatim original is preserved in the extraction record.
-6. **Post-generation numeric reconciliation** replaces the safety that
-   variable injection provides elsewhere on the PDP: every number in the
-   generated content must exist in the source JSON (exact lakh/crore
-   restatements of exact figures allowed); violations flag the content as
-   review_required and block publish.
-7. **Derived signals stay internal.** Inferred city (utility-board hints) and
-   construction status are stored as signals for master-data cross-checks —
-   never published as facts.
+- `payment_pipeline/datacenter.py` — replace `FileDatacenterClient` with the real datacenter API client (same two-method interface: `save`, `load`).
+- `payment_pipeline/content_generation.py` — paste the production **Senior Real Estate Writer voice charter v2.0** into `VOICE_CHARTER`, and align the HTML rules block with the PDP HTML/CSS standards document.
+- `payment_pipeline/config.py` — tune models, DPI, tolerances, and page caps here.
 
-## Production integration points
+## Roadmap
 
-- `payment_pipeline/datacenter.py` — replace `FileDatacenterClient` with the
-  real datacenter API client (same two-method interface).
-- `payment_pipeline/content_generation.py` — paste the production
-  **Senior Real Estate Writer voice charter v2.0** into `VOICE_CHARTER`, and
-  align the HTML rules block with the PDP HTML/CSS standards document.
-- `payment_pipeline/config.py` — models, DPI, tolerances, page caps.
+- [ ] Batch mode for processing multiple projects' payment plans in one run
+- [ ] Confidence-based auto-routing thresholds tuned from real review-queue data
+- [ ] Optional human-review UI for the review queue instead of file-based inspection
+- [ ] Extend `plan_type` structural classifier as new plan shapes are observed in production
+
+## License
+
+Proprietary — internal Square Yards tooling. Not for external distribution.
