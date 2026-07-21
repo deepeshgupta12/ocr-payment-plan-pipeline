@@ -130,4 +130,4 @@ If validation routes the record to review, content generation is skipped. After 
 
 ## License
 
-Proprietary — internal Square Yards tooling. Not for external distribution.
+Proprietary — Deepesh Kumar Gupta
